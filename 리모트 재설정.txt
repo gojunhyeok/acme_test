@@ -1,3 +1,5 @@
 git config --global --add safe.directory 'E:/go jun hyeok/go jun hyeok'  리모트 재설정
 
 git remote set-url origin https://gojunhyeok@github.com/gojunhyeok/acme_test.git
+
+git remote add origin https://github.com/gojunhyeok/acme_test 리모트 원격저장실에 다시연결
