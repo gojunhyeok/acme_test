@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+        /*     width: 100px;
+            height: 100px;
+            background: green;
+            animation-name:changecolor;
+            animation-duration: 2s;  바뀐뒤의  
+            animation-delay: 0.5s;    페이지가 열리고나서의 몇초뒤시작 
+            animation-timing-function: easy;   애니메이션의 속도모드 
+            animation-fill-mode: forwards;
+            animation-iteration-count:infinite;  반복횟수 왼쪽건 무한임
+            animation-direction : alternate-reverse;  방향임 normal 과 reverse alternate가 있다. */
+            animation: ease forwards infinite changecolor 2s 0.5s  reverse;
+        }
+
+        @keyframes changecolor{
+            from{background: green; }
+            50%{background: yellow;}
+            to{background: bisque; }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        header > *{
+            position: relative;
+            top:40px;
+            opacity: 0;
+            animation:fadeup 1s forwards;/* forwards 사용시 애니메이션 완료 이후 멈춤 */
+        }
+        header h2{
+            animation-delay:0.298999989988989898989s;
+        }
+        header p{
+            animation-delay:2s;
+        }
+        header a{
+            animation-delay:5s;
+        }
+      
+        @keyframes fadeup{
+            0%{top:40px;}
+            100%{opacity: 1;top:0px;}
+        }
+
+        /* 애니메이션 이름 fadeup, 1초에 걸려 제자리로 올라오도록 */
+
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+    <hr>
+    <!--  
+        아래쪽으로 40px 내려가고 있고, 투명도 0
+        순차적으로(0.1s간격) 위로(원래위치)올라오고 투명도 1
+        조건: hr 움직이면 안된다.
+        애니메이션의 이름 fadeUp, 시간 0.5초
+    -->
+    <header>
+        <h2>미니렁이집</h2>
+        <p>
+            나가3
+        </p>
+        <a href="">빨리나가란말이다ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ</a>
+    </header>
+    <hr>
+</body>
+
+</html>

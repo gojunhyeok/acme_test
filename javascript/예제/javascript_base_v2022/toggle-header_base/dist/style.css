@@ -1,0 +1,48 @@
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+:root {
+  --white: #fff;
+  --black: #221f1f;
+  --lightpurple: #9e91f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  position: relative;
+  font: 16px/1.5 sans-serif;
+  color: var(--white);
+}
+.page-main section{
+  height: 100vh;
+  background:no-repeat center/cover; 
+  position: relative;
+}
+.page-main section:before{
+  content:'';
+  right: 0; left: 0;top: 0;bottom: 0;
+  background: rgba(0,0,0,.25);
+  position: absolute;
+}

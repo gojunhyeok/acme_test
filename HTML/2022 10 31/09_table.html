@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td {
+            border:1px solid #ccc;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        
+        .mi1 {width:50px;}
+       
+        .mi3 {width:80px;}
+    </style>
+</head>
+<body>
+    <h1>무싸트 테이블 작성 과정</h1>
+    <table>
+        <colgroup>
+            <col class="mi"/>
+            <col class="mi1"/>
+            <col class="mi2"/>
+            <col class="mi3"/>
+        </colgroup>
+        <caption>
+            <h2>미니렁이 표</h2>
+            <p>미니렁이의 표다.</p>
+        </caption>
+        <thead>
+        <tr>
+            <th scope="col" >구분</th>
+            <th scope="col" >title1</th>
+            <th scope="col" >title2</th>
+            <th scope="col" >title3</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td colspan="3">data11</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td colspan="3">data21</td>
+            <td>data22</td>
+            <td>data23</td>
+        </tr>
+        <tr>
+            <th>3</td></th>
+            <td>data31</td>
+            <td>data32</td>
+            <td>data33</td>
+        </tr>
+    </tbody>
+        <tfoot>
+        <tr>
+            <th scope="row">total</th>
+            <td>data41</td>
+            <td>data42</td>
+            <td>data43</td>
+        </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table>
+        <caption>
+            <h2>미니렁이 표 두번째 버전</h2>
+            <p>미니렁이의 표다.</p>
+        </caption>
+        <thead>
+        <tr>
+            <th scope="col" >구분</th>
+            <th scope="col" >title1</th>
+            <th scope="col" >title2</th>
+            <th scope="col" >title3</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</td></th>
+            <td rowspan="3">data11</td>
+            <td>data12</td>
+            <td colspan="2"></td>data13</td>
+        </tr>
+        <tr>
+            <th scope="row">2</td></th>
+         
+            <td>data22</td>
+            <td>data23</td>
+        </tr>
+        <tr>
+            <th scope="row">3</td></th>
+        
+            <td>data32</td>
+            <td>data33</td>
+        </tr>
+    </tbody>
+        <tfoot>
+        <tr>
+            <th scope="row">total</th>
+            <td>data41</td>
+            <td>data42</td>
+            <td>data43</td>
+        </tr>
+        </tfoot>
+    </table>
+
+
+
+
+</body>
+</html>

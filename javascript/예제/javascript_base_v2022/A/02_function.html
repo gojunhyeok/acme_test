@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>function - javascript Basic</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <pre>
+        var 변수명 = 값;
+
+        function 함수명(){할일...}
+
+        함수실행
+        함수명();
+    </pre>
+    <script>
+       //  function send(){alert('경고');} 와 var send = alert('경고')  이두개가 같다는 뜻임
+       // alert('경고');
+       
+     function send(msg){  //매개변수, parameter
+      alert(msg)};
+    send('안녕하세요');  //안녕하세요. 인수 argument
+    </script>
+    <hr>
+    <h2>함수의 구조</h2>
+    <pre>
+        입력, 할일, 출력
+    </pre>
+    <script>
+        var sum; // sum 은 전역변수 어디서든지 접근할수있는 변수가 되었음
+        function add/*함수명*/(a,b)/*뽑고싶은값을넣는 자리*/{
+            sum = a + b;/*함수의 식*/
+            return sum;/*함수값리턴*/
+        }
+        var result = add(3,5); 
+        document.write(sum); // result 를 넣었어야 했지만 함수밖에 var sum 으로 sum 을 전역변수로 지정해놨기 때문에 sum 을 넣어도 결과값 8이 나오는 것
+    </script>
+    <hr>
+    <h3>익명함수</h3>
+    <pre>
+        
+    </pre>
+    <script>
+        var sum = function(x,y){
+            var z = x+y;
+            return;
+        }
+        document.write(sum(10,20));
+    </script>
+    <h3>즉시 실행 함수</h3>
+    <pre>
+        var sum = function(매개변수){
+            할일
+        })(인수)
+    </pre>
+    <script>
+        var sum = function(x,y){
+            var z = x+y;
+            return;
+        }(10,20); // 이부분에서 이미 함수는 실행 되었다.
+        document.write(sum); // 지금 줄의 함수는 실행한 결과를 출력할 뿐이다.
+
+    </script>
+</body>
+
+</html>

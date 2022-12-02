@@ -1,0 +1,101 @@
+x<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        figure {
+            text-align: center;
+            margin: 5rem auto;
+        }
+
+        img {
+            transition: 0.4s;
+        }
+/*         .translate:hover img {
+            transform: translate(50px, 50px); 가로세로 
+        }
+        .translate:hover img {
+            transform: translateX(50px); 가로
+        }
+        .translate:hover img {
+            transform: translateY(50px); 세로
+        } */
+        .translate{
+            perspective: 100px; /* translateZ 사용시의 카메라의 원근감 */
+            perspective-origin: 50% 50%; /* 카메라의 시점 위치 */
+        }
+        .translate:hover img {
+            transform: translateZ(100px); 
+        }
+        .scale:hover img{
+            transform:scaleZ(2) /* 움직인 거리의 2배 */ translateZ(100px);
+        }
+
+        /* .rotate:hover img{  회전
+            transform: :rotateX(360deg); x축 회전의 각도
+            로테이트는  perspective 요소를 사용해야함
+        }
+        .rotate:hover img{  회전
+            transform: :rotateY(360deg); y축 회전의 각도
+        } */
+        .rotate {
+            perspective: 500px;
+            perspective-origin: 0 50%;
+        }
+        .rotate:hover img{  
+            transform: perspective(500px) rotateY(90deg); 
+            
+        }
+        .rotate img{  
+            transform-origin:0% 50%; /* 중심점 */
+            transform: perspective(500px);
+        }
+
+        .skew:hover img{
+            transform:skewY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transform</h1>
+    <h2>translate</h2>
+    <figure class="translate">
+        <img src="imgs/sample1.jpg">
+        <figcaption>
+            photo description
+        </figcaption>
+    </figure>
+    <hr>
+    <h2>scale</h2>
+    <figure class="scale">
+        <img src="imgs/sample1.jpg">
+        <figcaption>
+            photo description
+        </figcaption>
+    </figure>
+    <hr>
+    <h2>rotate</h2>
+    <figure class="rotate">
+        <img src="imgs/sample1.jpg">
+        <figcaption>
+            photo description
+        </figcaption>
+    </figure>
+    <hr>
+    <h2>skew</h2>
+    <figure class="skew">
+        <img src="imgs/sample1.jpg">
+        <figcaption>
+            photo description
+        </figcaption>
+    </figure>
+
+
+</body>
+
+</html>

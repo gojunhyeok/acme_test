@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .box {
+            width: 500px;
+            padding: 20px;
+            /* border: 1px solid red;  ( 밑의 옵션들을 한줄로 묶은 방법이다.)*/
+            border-width:1px;
+            border-style:solid dotted dashed;
+            border-color: red
+        }
+        .box2 {
+            width: 500px;
+            padding: 20px;
+            margin: 50px auto;/* ( 위아래 여백은 50 좌우는 알아서) */
+        }
+        .box3 {
+            width: 500px;
+            padding: 20px;
+            margin-right: -100px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Box Model</h1>
+    <h2>padding</h2>
+    <div class="box">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box3">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <p>
+        미니렁이 대 등장
+    </p>
+
+
+</body>
+
+</html>

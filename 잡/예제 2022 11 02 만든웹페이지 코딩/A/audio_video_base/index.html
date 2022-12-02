@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <title>오디오 비디오 구현</title>
+</head>
+
+<body>
+    <h1>비디오</h1>
+    <!--
+    <video controls>
+        <source src="video/vivaldi.mp4" type="vidoe/mp4">
+        <source src="video/vivaldi.ogv" type="vidoe/ogv">
+        <source src="video/vivaldi.webm" type="vidoe/webm">
+        <p>귀하의 브라우저는 해당 비디오를 지원하지 않습니다.</p>
+    </video>
+    -->
+   
+        <video src="https://res.cloudinary.com/dyfkgbtqf/video/upload/v1639552889/vivaldi_mbcdvx.mp4" controls  poster="images/vivaldi.jpg" preload="auto">
+        귀하의 브라우저는 해당 비디오를 지원하지 않습니다.
+    </video>
+    
+
+    <!--
+        muted 추가하면 autoplay 작동한다.
+        preload="auto" 미리 다운로드 함.
+        preload="none" 미리 다운로드 안함.
+
+        폴백 컨텐츠 fallback contents
+    -->
+    <h2>youtube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPdk5GaIDjo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+
+    <iframe src="https://player.vimeo.com/video/37458139?h=0c762e1c4d&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <hr>
+    <h2>audio</h2>
+
+    <!-- <audio src="audio/Honey_Bee_01_web.mp3" controls></audio> -->
+
+    <audio controls>
+        <source src="audio/Honey_Bee_01_web.mp3" type="audio/mpeg">
+        <source src="audio/music.ogg" type="audio/ogg">
+        <p>음원을 지원하지 않습니다.</p>
+    </audio>
+</body>
+
+</html>

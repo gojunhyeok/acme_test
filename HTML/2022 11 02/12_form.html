@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <pre>
+        
+    </pre>
+    <!-- <form action="#" method="post"> 정석 -->
+    <form action="#">
+        <fieldset>
+            <legend>필수입력</legend>
+        <p>
+            <label for="username">이름:</label> 
+            <input type="text" name="username" id="username"
+            required placeholder="이름을 입력하세요"
+            value="" minlength="2" size="5" autofocus>
+        </p>
+        <p>
+            <label for="useremail">이메일:</label> 
+            <input type="email"  name="useremail" id="useremail">
+        </p>
+        <p>
+            <label for="userpw">비밀번호:</label> 
+            <input type="password"  name="userpw" id="userpw">           
+        </p>
+        
+    </fieldset>
+    <fieldset>
+        <legend>부가 입력</legend>
+        <p>
+            <label for="userTel"></label>
+            <input for="tel" id="userTel" placeholder="미니렁이의전화번호" 
+            pattern="[0-9]{3}~[0-9]{4}~[1-2]{4}"></input>
+        </p>
+        <p>
+            <label for="birth">생년월일</label>
+            <input type="date" id="birth">
+        </p>
+        <p>
+            <label for="location">지역</label>
+            <select name="location" id="location">
+                <option value="서울시">서울시</option>
+                <option value="뭔시">구박시</option>
+                <option value="미니렁이시">미니렁이시</option>
+            </select>
+        </p>
+        <p>
+            <span>기혼여부</span>
+            <label for="married">기혼</label>
+            <input type="radio" name="marrige" id="married" value="미혼">
+            <label for="unmarried">미혼</label>
+            <input type="radio" name="marrige"id="unmarried" value="미혼">
+        </p>
+        <p>
+            <span>관심사or취미</span>
+            <label for="sports" name="interest">운동</label>
+            <input type="checkbox" id="sports">
+            <label for="reading" name="interest">독서</label>
+            <input type="checkbox" id="reding">
+            <label for="game"name="interest">게임</label>
+            <input type="checkbox" id="game">
+        </p>
+        <p>
+            <label for="msg">인사말</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <label for="porfile">프로필등록</label>
+            <input type="file" id="porfile">
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>HTML5 신 속성 </legend>
+        <p>
+            <label for="city">도시</label>
+            <input type="text" id="city" list="citylist">
+            <datalist id="citylist">
+                <option value="서울시"></option>
+                <option value="미니렁이시"></option>
+                <option value="미니렁이시2"></option>
+                <option value="대박미니렁이시"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="url">웹사이트</label>
+            <input type="url" id="url">
+        </p>
+        <p>
+            <label for="career">미니렁이의 아파트층</label>
+            <input type="number" id="career"min="0" max="10" step="2">
+        </p>
+        <p>
+            <label for="skiil">숙련도</label>
+            <input type="range" name="skiil" id="skill"
+            value="3" min="0" max="10">
+
+        </p>
+        <p>
+            <label for="color">칼라</label>
+            <input type="color" id="color">
+        </p>
+        <p>
+            <label for="search">검색</label>
+            <input type="search" id="search">
+        </p>
+    </fieldset>
+        <p>
+            <!-- <input type="submit" value="전송"> -->
+
+            <!-- <input type="submit" value="전송">
+            <input type="reset" value="초기화"> -->
+
+            <!-- <img src="../../잡/예제 2022 11 02 만든웹페이지 코딩/A/images/iconfinder_tick_red_619540.png"
+             alt="전송"> -->
+
+            <input type="image"
+             src="../../잡/예제 2022 11 02 만든웹페이지 코딩/A/images/iconfinder_tick_red_619540.png" 
+             value="전송">
+             
+
+
+
+                
+            
+             
+        </p>
+    </form>
+    <hr>
+    <progress max="100" value="20"></progress>
+    <meter max="100" value="70" min="0"></meter>
+
+</body>
+</html>

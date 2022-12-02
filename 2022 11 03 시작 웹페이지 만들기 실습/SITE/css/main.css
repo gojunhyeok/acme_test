@@ -1,0 +1,90 @@
+
+.banner h2{
+    padding-bottom: 27px;/* .banner _tt 로 선택자를 사용하면 이후에 작성할 about 페이지등 다른 텍스트또한 선택되어 영향을 받을 수 있기 때문에 banner에서의 h2 로 지정 한 것 이다. */
+}
+.content_h3{
+    padding-bottom: 54px;/* content_tt 이하 동문 */
+    color: #fff;
+}
+
+.banner img{
+    display: block;
+    margin: 44px auto 0;
+}
+
+
+
+
+/* -------------------------------feature------------------------ */
+main .feature h2{
+    text-indent: -1000%;
+
+}
+
+main .feature ul li{
+    width:408px;
+    float:left;
+    margin-right: 24px;
+    text-align: center;
+}
+.feature li:last-child{
+    margin-right: 0;
+}
+main .feature li .icon{
+    border: 1px solid #439ccf;
+    border-radius:50%;
+    color:#439ccf;
+    width: 106px;
+    height: 106px;
+    display: inline-block;
+    box-sizing: border-box; /* 이거 잘 이해안갔음 */
+    line-height: 106px;/*  border-box 적용했으면 107아님? 왜 106임 */
+    font-size:32px;
+    color: #439ccf;
+}
+.feature li h3{
+    font-size: 24px;
+    line-height: 27px; /*  이거왜 29가아니라 27 한거임? border크기때문? */
+    margin:27px 0 ;
+}
+.feature li p{
+    line-height: 27px;
+}
+
+
+/* -----------------------------testmonial--------------------------------- */
+.testimonial .slide_wrapper{
+    height: 162px;
+    position:relative;
+}
+.testimonial blockquote{
+    width: 840px;
+    margin:0 auto;
+    font-size: 36px;
+    color: #489dcd;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+.testimonial blockquote span{
+    font-size: 16px;
+    font-style: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 27px;
+    margin-top: 54px;
+    color: #221a13;
+}
+.testimonial .controls i{
+    position: absolute;
+    font-size:45px;
+    color:#ebebeb;
+    top:(50% - 22.5px) ;
+
+}
+.testimonial .controls i:first-child{
+    left:0;
+}
+.testimonial .controls i:last-child{
+    right:0;
+}

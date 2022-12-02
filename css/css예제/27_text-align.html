@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 정렬</title>
+    <style>
+        body {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid;
+        }
+        .right{
+            text-align: right;
+        }
+        .center{
+            text-align:center;
+        }
+        .span{
+            text-align: right;
+        }/*  이런 경우 적용이 안된다  */
+        .center ~ p{
+            text-align: justify;
+        }/* 비워지지 않게 딱맞춤 설정 */
+        .justify{
+            word-break: break-all;
+        }/* justify 를 사용할때 같이 꼭 사용해야하는 프로퍼티 */
+    </style>
+</head>
+
+<body>
+    <h1>글자 정렬</h1>
+     <span>span text</span>
+    <p class="right">오른쪽</p>
+    <p class="left">왼쪽</p>
+    <p class="center">난 중앙</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia praesentium in saepe cupiditate
+        modi voluptates explicabo, excepturi sint? Vel autem, optio natus labore officia dignissimos eaque dolore
+        assumenda nisi beatae?</p>
+    <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia praesentium in saepe cupiditate
+        modi voluptates explicabo, excepturi sint? Vel autem, optio natus labore officia dignissimos eaque dolore
+        assumenda nisi beatae?</p>
+
+</body>
+
+</html>

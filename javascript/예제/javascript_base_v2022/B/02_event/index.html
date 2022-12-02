@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Basic Event</title>
+  
+</head>
+
+<body>
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid tenetur sapiente commodi aut a distinctio
+      quaerat minima ducimus? Eaque ad ipsa dolorem saepe facilis in suscipit commodi minima, odio omnis.</p>
+    <button id="submit">Click me</button>
+  </div>
+  <hr>
+  <h2>select</h2>
+  <select name="" id="color">
+    <option value="">색상을 선택하세요.</option>
+    <option value="#ccc">silver</option>
+    <option value="#ebebeb">Light gray</option>
+    <option value="green">green</option>
+  </select>
+
+  <script src="js/script.js"></script> <!-- body 에서 js 에 의한 동적인 style 을 주고싶을때 script 의 소스가 body 가  아닌 그 의 상단 예를들어 header 부분에 들어갈경우
+  웹브라우저가 body 를 읽기전에 소스부터 읽어버려서 스크립트의 진행이 안된다.(인식이안된다는말임) 
+
+  그러나 
+  document.addEventListener('DOMContentLoaded',()=>{
+
+  });
+  를 사용해서 내가 적용할 js 를 전부 이 함수에 넣어놓는다면 header 에서도 적용이된다.-->
+
+</body>
+
+</html>

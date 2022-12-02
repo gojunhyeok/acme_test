@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class Selector</title>
+    <style>
+        h1:hover{
+           background-color: aqua;
+        }
+        :link{
+            font-size: 50px;
+            text-decoration: none;
+            font-weight: 30px;
+            color: antiquewhite;
+        }
+        :visited{
+          color: bisque;
+        }
+
+        input:foucs , button:focus{
+            background-color: green;
+            color: #fff;
+        }
+        a:focus{
+                    background-color: blue;
+                    color:#fff
+                }
+        form p:focus-within{
+                background-color:red;   
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-class Selector</h1>
+    <p>
+        <a href="">link </a>
+        <a href="http://www.abc.com123">abc</a>
+    </p>
+    <form action="">
+    <p>
+        <label for="userid">ID</label>
+        <input type="text">
+    </p>
+    <p>
+        <label for="userEmail">email</label>
+        <input type="email">
+    </p>
+    <p>
+        <label for="username">name</label>
+        <input type="name">
+    </p>
+        <button>send</button>
+    </form>
+</body>
+
+</html>

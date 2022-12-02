@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  color: #555;
+  background: #2c3e50;
+}
+a { color: #3498db; }
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 5rem;
+  background: #fff;
+  border: 0.5rem solid #34495e;
+}
+#infopanel{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background:rgba(0,0,0,.7);
+
+}
+#infopanel .content{
+  background: #fff;
+  border-radius:8px;
+  width: 30rem;
+  padding:2rem;
+  
+  /*border:8px solid rgba(255,255,255,.25);
+  background-clip:padding-box;  배경을 어디까지나오게할지 결정하는속성 기본적인속성은 기본적으로 보더까찌로 설정되어 있슴  */
+  /* box-shadow: x y 블러 사이즈 칼라; */
+  /*  box-shadow:  0 0 0 8px rgba(255,255,255,.25); */
+  outline: 8px solid rgba(255,255,255,.25);
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+
+}
+#infopanel .content .close{
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  
+}
+
+#infopanel .content .close a{
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: #3498db;
+  border: 0.125rem solid #fff;
+}
+
+#infopanel .content .close:after{
+  content:'X';
+  font-weight: 800;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+}

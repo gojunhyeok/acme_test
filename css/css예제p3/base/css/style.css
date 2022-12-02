@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  color: #555;
+  background: #2c3e50;
+}
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 5rem;
+  background: #fff;
+  border: 0.5rem solid #34495e;
+}
+a {
+  text-decoration: none;
+  color: #3498db;
+  position: relative;
+  display: inline-block;
+
+
+}
+.fa {
+  font-size: 4rem;
+  margin: 1rem;
+}
+.fa-twitter {
+  color: #00b0ed;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.footnotes {
+  margin: 60rem auto;
+}
+
+.tooltip:hover .tip{
+  margin-left: 60rem auto;
+  opacity: 1;
+}
+.tip{
+  position: absolute;
+  background: #34495e;
+  color: #fff;
+  padding: 1em;
+  border-radius: 4px;
+  white-space: nowrap;/* 검색하삼 */
+  top:50%;
+  transform:translateY(-50%);
+  opacity: 0;
+  transition:0.5s;
+  visibility: hidden;
+  /*   top:50%;
+  transform:translateY(-50%);
+  어떤요소가 무슨크기이든 정확히 중앙에 있게 하는 TIP
+  */
+  left:100%;
+  margin-left:40px;
+}
+
+#footnote:target {
+  background: #ccc;
+}

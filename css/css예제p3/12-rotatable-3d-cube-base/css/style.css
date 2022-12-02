@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  color: #444;
+  overflow-y: scroll;
+}
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;  
+}
+.perspective{
+  perspective:2000px; /* 알긴하는데 ㅡ그래도 검색 함더 ㄱ */
+  position: relative;
+  perspective-origin: 400px -150px; /* 유저입장에서의 보이는 요소가아닌 시선(카메라) 위치 올리기 */
+}
+.cube{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin:3.5rem auto;
+  transition:0.5s;
+  transform-style:preserve-3d;
+
+ 
+}
+@keyframes rotate {
+  0%{transform:rotateY(0deg);}
+  100%{transform:rotateY(360deg);}
+  
+}
+.cube div{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0.5;
+}
+.cube div img{
+  width: 100%;
+  height: 100%;
+}
+.front{
+  transform:translateZ(200px);
+}
+.back{
+  transform:translateZ(200px) rotateY(180deg);
+}
+.left{
+  transform: translateZ(200px) rotateY(-90deg);
+}
+.right{
+  transform: translateZ(200px) rotateY(90deg);
+}
+.bottom{
+  transform: translateZ(200px) rotatex(-90deg);
+}
+.top{
+  transform: translateZ(200px) rotatex(90deg);
+}
+#auto:checked ~ .cube/* 오토가 체크됬을때 형제들중에 큐브전체 */{
+  animation: rotate 10s infinite linear;/* linear 검색 ㄱㄱ */
+
+}
+#front:checked ~ .cube{
+  transform: none;
+  animation: none;
+}
+#left:checked ~ .cube{
+  transform: rotateY(90deg);
+  animation: none;
+}
+#right:checked ~ .cube{
+  transform: rotateY(-90deg);
+  animation: none;
+}
+#back:checked ~ .cube{
+  transform: rotateY(-90deg);
+  animation: none;
+}
+#top:checked ~ .cube{
+  transform: rotateX(-90deg);
+  animation: none;
+}
+#bottom:checked ~ .cube{
+  transform: rotateY(90deg);
+  animation: none;
+}
+#bottom:checked ~ .cube{
+  transform: rotateY(180deg);
+  animation: none;
+}
+
+input{
+  display: none;
+}
+label{
+  display: inline-block;
+  background: #2989b9; color:#fff; padding: 5px 10px; border-radius:5px; margin:0 5px;
+}
+input:checked + label{
+  background: #3498db
+}

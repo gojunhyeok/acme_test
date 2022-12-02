@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <pre>
+        새배열 생성 
+        var 배열명 = []; //빈 배열 생성
+
+        배열에 값을 추가
+        배열명[인덱스번호] = 값 // index 0부터 시작
+
+    </pre>
+    <script>
+        var frontlangs = [];
+        frontlangs[0] = 'HTML';
+        frontlangs[1] = 'CSS';
+        frontlangs[2] = 'javascript';
+        
+        console.log(frontlangs);
+        document.write(frontlangs[1]);
+    </script>
+    <hr>
+    <script>
+
+    </script>
+    <hr>
+    <script>
+
+    </script>
+    <h2>length</h2>
+    <pre>
+        배열의 개수 length
+        배열명.length
+    </pre>
+    <script>
+        document.write(frontlangs.length);
+    </script>
+    <h2>join</h2>
+    <pre>
+        배열의 값 병합 -> 문자열
+        배열명.join();
+        배열명.join('/');     - _ 등등을 넣으면 된다
+
+    </pre>
+    <script>
+        var frontlang2 = frontlangs.join('/');
+        document.write(frontlang2);
+        console.log(typeof(frontlangs), typeof(frontlang2));
+    </script>
+    <h2>reverse</h2>
+    <pre>
+        배열의 값(원소)을 역순으로. 주의할점은 원본이 수정된다.
+    </pre>
+    <script>
+       /*  var front = frontlangs.reverse();
+        document.write(front);
+        console.log(frontlangs); */
+
+        var front = frontlangs.map(function(item){
+            return item;
+        });
+        console.log(front.reverse());
+
+        var front2 = [...frontlangs];
+        console.log(front2);
+        /* 
+        Array.from
+        concat
+         */
+    </script>
+    <h2>sort</h2>
+    <pre>
+        내림, 오름, 알파벳, 가나다.... - 배열의 값을 정렬  주의점으로 원본이 수정됨
+        대상.sort() // 영어면 알파벳순 숫자면 오림차순으로 해줌
+        return 으로 -1의 값을 받으면 역순으로 정렬된다.
+    </pre>
+    <script>
+        var fruits =['apple','orange','mango'];
+        var nums = [10 , 50, 20 , 40];
+        fruits.sort();
+        document.write(fruits);
+        document.write(nums.sort());
+    </script>
+    <hr>
+    <script>
+        fruits.sort(function(){
+            return -1;
+        });
+        document.write(fruits);
+        nums.sort(function(){
+            return -1;
+        });
+        document.write(nums);
+    </script>
+    <h2>push</h2>
+    <pre>
+        배열의 마지막에 값 추가
+    </pre>
+    <script>
+        fruits.push('grape');  // grape 추가
+        document.write(fruits); 
+    </script>
+    <h2>pop</h2>
+    <pre>
+        배열의 마지막 값을 제거  
+    </pre>
+    <script>
+        fruits.pop();  // grape 추가
+        document.write(fruits);
+    </script>
+    <h2>unshift</h2>
+    <pre>
+        배열의 앞의 값을 추가
+    </pre>
+    <script>
+        fruits.unshift('grape');
+        document.write(fruits);
+    </script>
+    <h2>shift</h2>
+    <pre>
+        배열의 앞의 값을 제거
+    </pre>
+    <script>
+        fruits.shift();
+        document.write(fruits);
+    </script>
+    <h2>slice</h2>
+    <pre>
+        인덱스번호 해당 원소를 복사 추출
+        대상.slice(시작, 끝); 끝번호 앞까지
+    </pre>
+    <script>
+        var orgnums = [0,1,2,3,4,5,6];
+        var newnums =  orgnums.slice(2,5);
+        document.write(newnums);
+        console.log(orgnums);
+
+    </script>
+    <h2>splice</h2>
+    <pre>
+        인덱스번호 해당 원소를 오려내어 추출
+        대상.splice(시작, 끝); 끝번호 앞까지
+    </pre>
+    <script>
+        var newnums2 = orgnum.splice(0,4);
+        document.write(newnums2);
+        console.log(orgnums);
+
+    </script>
+    <h2>concat</h2>
+     <pre>
+        대상.concat(합칠 대상) 합칠 대상-배열명, 값
+     </pre>
+    <script>
+        var backlangs = ['php','asp','jsp'];
+        var fullstack = frontlangs.concat(backlangs);
+        document.write(fullstack);
+
+    </script>
+    <h2>filter</h2>
+    <pre>
+        조건에 맍는 값들로 새 배열을 생성
+        대상.filter(function(매개변수)){
+            return 매개변수...
+        }
+    </pre>
+    <script>
+        var $nums = [10,7,25,22,30]
+        var $mynums = $nums.filter(function(item){
+            return item % 5 === 0;
+        })
+        document.write($mynums);
+    </script>
+</body>
+
+</html>

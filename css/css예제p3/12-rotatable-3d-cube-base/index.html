@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Rotatable 3D Cube</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="wrapper">
+
+  <div class="perspective">
+    <input type="radio" name="switch" id="auto"> <!-- 인풋 라벨은 나중에 선택자를 +를 활용한 방법으로 인풋 뒤의 선택자들을 가져와야하기때문에 위족에 있어야함 -->
+    <label for="auto">auto</label>
+
+    <input type="radio" id="front">
+    <label for="front">front</label>
+    <input type="radio" id="back">
+    <label for="back">back</label>
+    <input type="radio" id="left">
+    <label for="left">left</label>
+    <input type="radio" id="right">
+    <label for="right">right</label>
+    <input type="radio" id="bottom">
+    <label for="bottom">bottom</label>
+    <input type="radio" id="top">
+    <label for="top">top</label>
+    <div class="cube">
+      <div class="front">
+        <img src="images/front.jpg">
+      </div>
+      <div class="back">
+        <img src="images/back.jpg">
+      </div>
+      <div class="top">
+        <img src="images/top.jpg">
+      </div>
+      <div class="bottom">
+        <img src="images/bottom.jpg">
+      </div>
+      <div class="left">
+        <img src="images/left.jpg">
+      </div>
+      <div class="right">
+        <img src="images/right.jpg">
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+  
+  
+</body>
+</html>

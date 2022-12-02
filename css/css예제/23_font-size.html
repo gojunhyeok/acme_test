@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 크기</title>
+    <style>
+        .xx-small{
+            font-size: xx-small;
+        }
+        .x-small{
+            font-size: 20px;
+        }
+        .small{
+            font-size: 100%;
+        }/*  폰트 사이즈는 16  ( 기본값은 16px 이기 떄문) */
+        
+        
+        body{
+            font-size: 10px;
+        }
+        .medium{
+            font-size: 2em; 
+        }/* 스타일에서 폰트의 사이즈를 미리 지정해 놓은뒤 em 을쓸경우폰트 사이즈는 20 (em은 단위가 원래 폰트 사이즈의 배수) */
+
+        
+        .large{
+            font-size: 2rem; 
+        }/* 폰트 사이즈는 32 (rem은 무조껀 기본값 사이즈의 배수)
+            :root{font-size: 12px} 기본값 =12, 12X2 */
+
+        .x-large {
+            font-size: 10vw;
+        }/* 1920 x 10% */
+    </style>
+</head>
+
+<body>
+    <h1>글자 크기</h1>
+
+    <p class="xx-small">font-size:xx-small;</p>
+    <p class="x-small">font-size:x-small;</p>
+    <p class="small">font-size:small;</p>
+    <p class="medium">font-size:medium;</p>
+    <p class="large">font-size:large;</p>
+    <p class="x-large">font-size:x-large;</p>
+    <p class="xx-large">font-size:xx-large;</p>
+
+
+</body>
+
+</html>

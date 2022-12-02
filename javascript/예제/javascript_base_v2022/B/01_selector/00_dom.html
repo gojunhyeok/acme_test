@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Document Title</title>
+    <style>
+        .mini3{
+            position:absolute;
+            top:50%;
+            left:0%;
+            opacity: 1;
+            color: aqua;
+            background: #fff;
+            animation-name:mini3;
+            animation-duration: 5s;
+            animation-fill-mode:forwards;
+        }
+        .mini3:hover {
+            opacity: 1;
+            
+        }
+        @keyframes mini3{
+            0%{background: #000;}
+            30%{background: #ababab;
+                
+                opacity: 0;}
+            60%{background: rgb(209, 12, 61);
+                
+                opacity: 0.2;}
+            75%{background: rgb(74, 56, 175);
+                
+                opacity: 0.4;}
+            90%{background: #6bb331;
+                
+                opacity: 1;}
+            100%{background: #6b0050;
+                top:0%;
+                opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+    <h1>미니렁이다</h1>
+    <h2>미니렁이 동생이다 </h2>
+    <h3 class="mini3">미니렁이 동생3다 </h3>
+</body>
+
+</html>

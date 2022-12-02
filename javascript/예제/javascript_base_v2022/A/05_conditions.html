@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>conditions</title>
+</head>
+
+<body>
+    <h1>조건문</h1>
+    <script>
+        var a = 10;
+        var b = 20;
+        if(a>b){
+            document.write('b가 a보다 크다.')
+        }else{
+            document.write('a가 b보다 크다.')
+        }
+    </script>
+    <hr>
+    <script>
+
+    </script>
+    <hr>
+    <h2>비교연산자 != </h2>
+    <script>
+         var a = 10;
+        var b = 20;
+        if(a>b){
+            document.write(' a 가 b보다 크다.');
+        }else if(a == b){
+            document.write('a가 b와 같다.');
+        } else{
+            document.write('a가 b보다 크다.');
+        }
+    </script>
+    <hr>
+    <h2>타입 비교</h2>
+    <script>
+        if(1 == '1'){
+            document.write('두 값은 같다');
+        }
+        if(1 === '1'){  // 비교연산자중 === 는 문자열과 숫자의 구분등 정교한 비교가가능 한 비교연산자 이다.
+            document.write('두 값은 같다');
+        }else{
+            document.write('두 값은 다르다');
+        }
+    </script>
+    <hr>
+    <h2>중첩 조건문</h2>
+    <script>
+        if(a != b){
+            if(a>b){
+                document.write(' a 가 b보다 크다.');
+            }else{
+                document.write(' a 가 b보다 작다.');
+            }
+        }
+    </script>
+    <h2>조건문의 축약</h2>
+    <script>
+        /*
+         var a = 10;
+        var b = 20;
+        if(a>b){
+            document.write('b가 a보다 크다.')
+        }else{
+            document.write('a가 b보다 크다.')
+        }
+        */
+       //중괄호 생략
+       if(a>b)
+            document.write('b가 a보다 크다.');
+        else
+            document.write('a가 b보다 크다.');
+        
+        //더 줄이는방법
+
+        (a>b) ? document.write('b가 a보다 크다.') document.write('a가 b보다 크다.');
+        //대신 이런경우는 else 가있는 if 문에만 사용가능하다.
+    </script>
+
+    <h2>논리연산자</h2>
+    <script>
+
+    </script>
+
+    <h2>switch</h2>
+    <script>
+
+    </script>
+</body>
+
+</html>

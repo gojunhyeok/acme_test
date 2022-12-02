@@ -1,0 +1,12 @@
+section{
+    height:80vh;
+}
+section h2.animate__animated{
+   opacity: 0;
+}
+section h2.animate__bounceInLeft{
+   opacity: 1;
+}
+section h2.animate__bounceInRight{
+   opacity: 1;
+}

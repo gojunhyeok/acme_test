@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h1>ECMAScript 6</h1>
+    <h2>Template Literal</h2>
+    <script>
+        var str1 = 'hello';
+        var str2 = 'world';
+        /* es5
+        var greeting = str1 + ' ' + str2;
+        document.write(greeting); */
+        var greeting = `${str1} - ${str2}`;
+        document.write(greeting);
+// "apple", "orange", "banna"  32
+
+
+        var product = {
+            name:'도서',
+            price:'30000언'
+
+        };
+       /*   es5
+        document.write('제품' + product.name + ' 의 가격은 ' + product.price + '입니다.'); */
+        document.write(`제품${product.name}의 가격은${product.price}입니다` );
+        
+        let val1 = 10;
+        let val2 = 20;
+        document.write(`${val1*val2}`);
+        
+    </script>
+    <h2>var vs. let</h2>
+    <script>
+        var lang = 'html'; 
+        function learnWeb(code){
+            /* var lang = '?' */
+            if(code){
+                var lang='기초언어';
+                return lang;
+            }
+            return lang;
+        }
+        console.log(learnWeb(false));/* 이런경우 html 이아닌 ? 가 나온다;;
+        주석처리했어도 선언한 값이 그대로 남아있기 때문임;; */
+
+       /* 하지만 let 을 쓴다면 그런게 없어지니 이제 let만쓰셈 ㅇㅇ;; */
+
+
+
+    </script>
+
+    <h2>const</h2>
+    <pre>
+        상수, 상시 같은 값, 변하지 않는 값 불변
+    </pre>
+    <script>
+        var num = 1;
+        num = 2; /* 2가나옴 */
+        console.log(num);
+        let num2 = 2;
+        num2 = 3; /* 3이나옴 */
+        console.log(num2);
+
+        const num3 = 3;
+        num = 4; /* 오류임 */
+
+        const st = {
+            kor:100,
+            eng:90
+        }
+
+        /*  이런경우 const 자체로 선언한 st 자체를 바꿀수는 없지만
+        st 프로퍼티의 속성인 kor:100 과 eng: 90 자체의 일부값은 바꿀수 있다.
+        단 프로퍼티의 속성값에 length 처럼 추가한다는 것은 불가능하다.*/
+    </script>
+    <hr>
+    <h2>const 변수 값의 수정</h2>
+    <script>
+
+    </script>
+    <h2>const 변수 재할당</h2>
+    <script>
+
+    </script>
+    <h2>Arrow function 화살표 함수</h2>
+    <script>
+
+    </script>
+    <hr>
+    <script>
+        //1 기존 문법
+
+        function add(x,y){
+            return x+y;
+        }
+        document.write(add(10,20));
+
+        /* 밑에꺼로 변경가능 */
+        
+        let add = function(x,y){
+            return x+y;
+        }
+        document.write(add(10,20));
+
+        /* 더 밑에꺼로 변경가능 */
+
+        let add = (x,y)=>{
+            return x+y;
+        }
+        document.write(add(10,20));
+
+
+        
+        //2 매개변수가 하나일 때는 괄호 생략 하고 밑에꺼로 더 변경가능;;;
+
+        let add = (x,y) => x+y;
+        document.write(add(10,20));
+
+
+        //3 함수내에서 바로 리턴만 있을 때 중괄호 생략 가능
+        function add2(num){
+            let value = 10;
+            return function(value){
+                return num + value;
+            }
+        }
+        let result = add2(2);
+        document.write(result);
+
+    </script>
+    <h2>Spread Operator 전개 연산자</h2>
+    <script>
+        let arr = [1,2];
+        let arr2 = [3,4,5,6];
+        /* es5
+        let arr3 = [arr1[0],arr1[1],arr2[0],arr2[1],arr2[2],arr2[3],arr2[4]];
+        console.log(arr3); 
+        이런방법은 너무 무식함 ㅇㅇ........하지만?*/
+
+        /* let arr3 = arr1.concat(arr2); concat 을 이용한 이런방법도 있고 ㅇㅇ */
+
+        let arr3 = [...arr1, ...arr2];
+        console.log(arr3);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>변수 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>변수</h1>
+    <pre>
+        var, let, const
+        var  변수명 = 값
+        let  변수명 = 값
+        const  변수명 = 값
+
+
+ 
+        "  문자  "  o
+        '  문자  '  o
+        '" 문자 "'  o
+        "  '문자'  "  o
+        ""  문자  ""  x
+        ''  문자  ''  x
+    </pre>
+    <script>
+        var _new = '문자' ;
+        _new = '기초'; //값만 변경
+        var _new = "문자2";  // 새롭게 선언, 초기화
+        document.write(_new);  // 선언된 변수를 웹페이지에 쓰기
+    </script>
+    <hr>
+    <pre>
+        숫자는 따옴표 없이 작성 해야한다.
+    </pre>
+    <script>
+        let num = 30;
+        num = 40;
+        document.write(num);
+    </script>
+    <hr>
+    <script>
+        const num1 = 50;
+        num1 = 60;
+        document.write(num1);
+    </script>
+    <hr>
+    <pre>
+        boolean 참, 거짓
+    </pre>
+    <script>
+        var bool = true;
+        var n =null; // 변수명생성, 없는 값을 지정\
+        var u; // undefined 값을 아예 정의하지 않은 값, 변수명 재사용
+
+        console.log(_new);
+        console.log(num);
+        console.log(bool);
+        console.log(n);
+        console.log(u);
+
+    </script>
+    <pre>
+        자바스크립트는 자료형이 자동으로 인식
+        typeof(대상)
+    </pre>
+    <script>
+        console.log(typeof(_new));  //문자
+        console.log(typeof(num));  //숫자
+        console.log(typeof(bool));   // 참 거짓
+        console.log(typeof(n));  //객체
+        console.log(typeof(u));   // unldefined
+    </script>
+</body>
+
+</html>

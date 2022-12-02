@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List</h1>
+    <h2>Unorder List - 비순차 목록</h2>
+    <pre> 
+
+        ul, ol의 자식요소는 li만 올 수 있다. 
+    <!--
+        <ul>
+            <h2>title</h2> <!-- 자식요소가 h2가 온것이 오류임  -->
+            <div></div> 
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+            <li>list item</li>
+        </ul> 
+     -->
+        <hr>
+      <!--
+        <hr>
+        <ul>
+            <li>list item</li>
+        </ul>
+        <ul>
+            <li>list item</li>
+        </ul>
+        <ul>
+            <li>list item</li> 
+        </ul>
+     <hr>  
+     --> 바람직 하지않다.
+    </pre>
+
+
+    <h2>title</h2>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <h2>Orded List - 순차 목록</h2>
+    <ol>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ol>
+    <h2>Defintion List- 정의 목록</h2>
+    <dl>
+        <dt>definition term</dt> <!--  제목의 성격   -->
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+    </dl>
+    <hr>
+    <dl>
+        <dt>definition term</dt> <!--  제목은 3개인데 설명은 1개   -->
+        <dd>definition term</dd>
+        <dd>definition term</dd>
+        <dd>definition description</dd>
+    </dl>
+    <hr>
+    <dl>
+        <dd>definition term</dd><!--  바람직하다 용어(제목)한개에 설명1개씩 -->
+        <dd>definition description</dd>
+        <dd>definition term</dd>
+        <dd>definition description</dd> 
+    </dl>
+    <hr>
+    <ul>
+        <li>About us
+            <ul>
+                <li>Ceo greeting</li>
+                <li>Vision</li>
+            </ul>
+        </li>
+        <li>Services
+            <ul>
+                <li>web
+                    <ul>
+                        <li>미니렁이</li>
+                        <li>미니렁이2</li>
+                    </ul>
+                </li>
+                <li>app</li>
+                <li>mobile</li>
+            </ul>
+
+        </li>
+        <li>works</li>
+
+        <li>contact us</li>
+
+    </ul>
+</body>
+</html>

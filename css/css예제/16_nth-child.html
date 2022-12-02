@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child Selector</title>
+    <style>
+        li:first-child(1)
+          /* li 자식들중에 1번을 선택하고싶다 */
+        li:ntn-child(3){
+            text-decoration:underline ;
+        }
+        li:last-child(5){
+            text-decoration:underline ;
+        }
+        li:nth-child(2n){
+
+        }
+        li:nth-child(even){
+
+        }
+        /* 리스트가 몇개이든간에 짝수로 */
+
+        li:nth-child(2n+1){
+
+        }
+        li:nth-child(odd){
+
+        }
+        /* 리스트가 몇개이든간에 홀수로 */         
+        li:nth-child(n+3){
+
+        }
+        /* 리스트가 몇개이든 3이상부터 */
+        li:nth-child(n+3):nth-child(n-5){
+            color:blue
+}
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <h2>두번째다</h2>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>나를 빨강으로 만들어라</li>
+        <li>나는 토마토다</li>
+        <li>나는 케첩이다</li>
+    </ul>
+</body>
+
+</html>

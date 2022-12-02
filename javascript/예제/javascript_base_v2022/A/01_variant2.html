@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>산술 연산자 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <pre>
+        +, -, *,/ 에 대해 알아 볼 것
+        % 란 ?   나눈 나머지이다 나누기랑 다른 것이 
+        나누기는 나눈 값이지만 %는 말그대로 사칙연산에서 나누고 남은 나머지이다
+    </pre>
+    <script>
+       var num1 = 100;
+       var num2 = 30;
+       console.log(num1+num2);
+       console.log(num1-num2);
+       console.log(num1*num2);
+       console.log(num1/num2);
+       console.log(num1%num2);  //10 
+    </script>
+    <h3>문자열 더하기</h3>
+    <pre>
+    '문자' + 20  ->  문자20
+    '문자' + 20 + 30 ->  문자2030
+    20+30+'문자'  -> 50문자
+    10+'20'  ->      1020
+    10 -'20' -> - 10
+    </pre>
+    <script>
+        var str1= '자바스크립트'
+        var str2= '기초'
+        console.log(str1+str2); // 자바스크립트기초
+
+        console.log('문자'+20);
+        console.log('문자'+20+30);
+        console.log(20+30+'문자');
+        console.log(10+'20');
+        console.log(10-'20');
+        console.log(10*'20');
+        
+    </script>
+    <h3>증감 연산자</h3>
+    <pre>
+       i++ 란? 실행된뒤에 값을 1씩 추가
+       ++i 란? 실행되자마자 1씩추가
+    </pre>
+    <script>
+        var i = 1;
+        // i = i+1;
+       // i++;
+        //console.log(i++); 여전히 1 그 이유는 console.log 라는 변수가 실행된순간에 값을 보여주었기 때문에 1이고 다음줄부터나올값은 2임
+       // console.log(i); 2
+
+       console.log(++i); //2
+       console.log(i); //2
+        
+    </script>
+    <h3>복합대입연산자</h3>
+    <pre>
+        + = 더한 결과
+        - = 곱합 결과
+        * = 나눈 결과
+        / = 나눈나머지 결과
+    </pre>
+    <script>
+        var i = 1;
+        // i = i * 2;
+        i*=2;
+        console.log(i);
+    </script>
+
+
+</body>
+
+</html>

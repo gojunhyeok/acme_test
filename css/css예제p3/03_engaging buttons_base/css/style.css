@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  background: #2c3e50;
+}
+
+.wrapper {
+  max-width: 65rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 5rem;
+  text-align: center;
+  background: #fff;
+  border: 0.5rem solid #34495e;
+}
+
+hr {
+  border: 0;
+  border-bottom: 0.0625rem solid #bbb;
+  margin: 3rem 0;
+}
+
+button {
+  font-size: 2em;
+  background: #3498db;
+  color: #fff;
+  border: 0.25rem solid #3498db;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  /* overflow: hidden; */
+  z-index:0;
+}
+button:hover{
+  color:#3498db;
+}
+button:after{
+  content:'';
+  position: absolute;
+  background:#ecf0f1;
+  padding: 10px;
+  transition:0.34s;
+  z-index:-1;
+}
+button[class^="slide"]hover:after{
+  left: 0%; right: 0;top: 0; bottom: 0;
+}
+
+.slide_from_left:after{
+  left:-100%;
+  right:100%;
+  top:0;
+  bottom:0;
+}
+.slide_from_right:after{
+  left:100%;
+  right:-100%;
+  top:0;
+  bottom:0;
+}
+.slide_from_top:after{
+  left:0;
+  right:0;
+  top:-100%;
+  bottom:100%;
+}
+.slide_from_bottom:after{
+  left:0;
+  right:0;
+  top:100%;
+  bottom:-100%;
+}
+
+.grow_box:after{
+  left: 0; right: 0;top: 0; bottom: 0;
+  transform:scale(0);
+}
+.grow_box:hover:after{
+  transform:scale(1);
+}
+
+
+
+
+
+.grow_ellipse:after{
+  left: -50%; right: -50%;top: 0; bottom: 0;
+  transform:scale(0);
+  
+  z-index: -1;
+  border-radius: 50%;
+  
+
+}
+.grow_ellipse:hover:after{
+  transform:scale(1);
+  
+  
+  
+  
+  
+
+
+}
+.grow_skew_forward:after{
+  left: -50%; right: -50%;top: 0; bottom: 0;
+
+  transform: skew(45deg) scaleX(0);
+}
+.grow_skew_forward:hover:after{
+  transform: skew(45deg) scaleX(1);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grow_skew_backward:after{
+  left: -50%; right: -50%;top: 0; bottom: 0;
+  transform: skew(45deg) scaleX(0);
+}
+.grow_skew_backward:hover:after{
+  transform: skew(45deg) scaleX(1);
+}
+
+
+
+
+.grow_spin:after{
+
+  left: 0%; right: 0;top: 0; bottom: 0;
+  transform:scale(0);
+}
+.grow_spin:hover:after{
+  transform:scale(1);
+}

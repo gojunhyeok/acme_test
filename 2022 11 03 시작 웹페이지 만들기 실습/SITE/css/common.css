@@ -1,0 +1,225 @@
+@charset "utf-8"; /* before after 가상공간을 만들때의 글씨마저 안깨지게 작성 */
+@import url('./normalize.css');
+@import url('./reset.css');
+@import url('./all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+
+
+
+
+/* -----------------------------------레이아웃---------------------------------- */
+
+.container{
+    width: 1272px;
+    margin:0 auto;
+}
+.content-pd{
+    padding: 81px 0;
+    text-align: center;
+    
+}/* 공통의 너비 간격을 상하 81 좌우 0 */
+.content-top-pd{
+    padding-top: 81px ;
+    text-align: center;
+}/* 컨텐츠의 상단 너비만 상81 */
+
+.cf:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header h1{
+    float:left;
+}
+header nav{
+    float:right;
+    padding: 7.5px 0;
+    /* line-height:54px; 도 가능 */
+}
+header.active{
+    padding: 14px 0;
+    position: fixed;
+    left: 0;right: 0t 0;background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+hr{
+    border:none;
+    height: 1px;
+    background: #a8a8a8;
+    /* border-top:1px solid #a8a8a8 */
+}
+hr.small{
+    width: 750px;
+    margin:0 auto;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+
+
+
+
+/* -----------------------------------폰트위계---------------------------------- */
+body{
+    font-family: 'open Sans', sans-serif;/* 바디안의 폰트는 전부 이거다 */
+    color: #2c2c2c;
+}
+.banner_tt{
+    font-size: 54px;
+    color:#3a99d8;
+    text-transform: uppercase; /* 이거머임 */
+    letter-spacing: 0.05em;  /* 이거머임 */
+    margin: 0 auto;
+}
+.content_tt{
+    font-weight:300;
+    font-size: 32px;
+    
+    letter-spacing: 0.05em;
+    margin-bottom: 27px;
+    color:#ebebeb;
+    
+}
+.content_desc{
+    font-size:  18px;
+    font-weight: 300;
+    margin-bottom: 54px;
+    text-align: center;
+
+}
+header nav li:first-child{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 7.5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header nav li:first-child a{
+    color:#2c2c2c;
+}
+
+
+/* -----------------------------------배색---------------------------------- */
+.btn.highlight_bg{
+    background-color:#9ac75b ; 
+    color: #55762c;
+}
+.banner{
+    background:#2d3e4f;
+    text-align: center;
+}
+/* 선택자에서 .btn 을 빼고 background-color 에 !importent 를 사용할 수도있지만 
+애초에 !importent 는 최후의 최후 까지 아껴놓은 상태에서 사용하는 것 이 좋기 때문에 사용 안하는 것이 좋다. */
+
+/* -----------------------------------링크, 버튼---------------------------------- */
+
+.btn{
+    background: #ebebeb;
+    line-height: 39px;
+    padding:5px 20px; /* 배경을 옆으로 늘리는 방법임 */ 
+    display: inline-block; /* 인라인블락을걸어 글자속성과 크기속성을 전부줘야
+    버튼이 좌우배치도 되고 높이도 설정이 가능해짐 */
+    border-radius: 4px; /* 백그라운드의 모서리를 둥글게  */
+    color: #6e6e6e;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.btn i {
+    margin-right: 10px;
+}
+.link{
+    text-decoration: none;
+    color:#9ac75b;
+}
+
+
+/* --------------------------------헤더--------------------------------------- */
+header{
+    padding: 27px 0;
+    background-color: #fff;
+    box-shadow: 0 5px 3px rgba(0,0,0,.1);
+    transition: 0.4s;
+}
+/*     box-shadow: x y blur [size] color; */
+
+header nav li {
+    float: left;
+}
+header nav li + li {
+    margin-left: 10px;}
+
+header nav li:first-child{
+    margin-right: 60px;
+
+}
+
+header .logo a{
+    width: 161px;
+    height: 54px;
+    background: url(../images/logo.png) no-repeat/* 이미지의 반복 금지 */; 
+    display: block;
+    text-indent: -100%;
+    overflow:hidden;
+} 
+header nav li:first-child span{
+    margin:0 10px;
+}
+
+/* ----------------------------slide show------------------------------- */
+
+.slide_container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.slide_wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.slide_wrapper li{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.slide_container li{
+    float:left;
+    width: 100%;
+}
+.slide_wrapper .controls i{
+    position: absolute;
+    font-size: 45px;
+    color: #ebebeb;
+    top:calc(50% - 22.5px);
+    cursor: pointer;
+}
+
+/* -------------------footer------------------ */
+footer .cta{
+    text-align: center;
+    color: #fff;
+    background: #292c2e;
+}
+footer .cta p {
+    color:#a8a8a8;
+}
+
+footer address{
+    text-align: center;
+
+}
+footer address p + p{
+    margin-top: 27px;
+}

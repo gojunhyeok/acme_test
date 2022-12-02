@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siblings - CSS Selector</title>
+    <style>
+        h1 + ul{
+            background-color: rgb(146, 172, 108);
+        }
+        h2 ~ ul{
+            background-color: rgb(94, 100, 86);
+        }
+        h4 + ul > li > ul{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Siblings 형제선택자</h1>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+    <h2>Main title</h2>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+    <h3>Sub title</h3>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+    <h4>ㅎㅇ</h4>
+        <ul>
+            <li>푸하하하
+                <ul>
+                    <li>456</li>
+                </ul>
+            </li>
+        </ul>
+
+
+</body>
+
+</html>

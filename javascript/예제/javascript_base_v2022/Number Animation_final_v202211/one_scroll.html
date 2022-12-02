@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 애니메이션</title>
+    <style>
+        .rate{
+            height: 25px;
+            position: relative;
+            border:2px solid #ccc;
+        }
+        .bar{
+            position: absolute;
+            left: 0; top: 0;bottom: 0;
+            width: 0;
+            background: #3498db;
+        }
+        .rate span{
+            position: absolute;
+            right: 20px; top: 0; bottom: 0;
+            line-height: 25px;
+            font-weight: bold;
+        }
+        section{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number animation</h1>
+    <section>
+        <h2>content title</h2>
+    </section>
+    <div class="rate" data-rate="45">
+        <div class="bar"></div>
+        <span>0</span>
+    </div>
+    <section>
+        <h2>content title</h2>
+    </section>    
+    <script>
+        let rate = document.querySelector('.rate'),
+            rateOST = rate.offsetTop,
+            bar = rate.querySelector('.bar'),
+            targetNum = rate.getAttribute('data-rate'),
+            num = 0,
+            excuted = false,
+            span = rate.querySelector('span');
+
+        window.addEventListener('scroll',()=>{
+            if(window.pageYOffset >= rateOST - (rateOST/2) ){
+                // if(!rate.classList.contains('active')){
+                if(excuted == false){
+                    let animation = setInterval(()=>{            
+                        span.innerText = ++num;
+                        if(num == targetNum){
+                            clearInterval(animation);
+                        }    
+                        //bar의 너비를 변경
+                        bar.style.width = `${num}%`;
+                        // rate.classList.add('active');
+                        excuted = true;
+                    }, 10);
+                }
+
+            }
+        });
+         
+
+
+    </script>
+
+</body>
+</html>

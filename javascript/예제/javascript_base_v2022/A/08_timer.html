@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>timer</title>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <pre>
+        시간을 한번 재고, 할일
+        setTimeout(할일, 시간);
+        할일 = 함수 = function(){ 수행할 코드}
+        시간은 ms(밀리세컨드)가 기준이고 1000 1초 이다.
+        <!-- alert 를 이용한 인사를 수행할 예정 '반갑습니다.' -->
+
+        clearTimeout(대상)
+    </pre>
+    <script>
+         
+    </script>
+    <h2>setTimeout</h2>
+    <pre>
+
+    </pre>
+    <script>
+    /* setTimeout(function(){
+                    alert('반갑습니다.')
+                }, 4000);/*  4000은 4초 */
+    </script>
+
+    <h2>setInterval</h2>   <!-- 외워야함 -->
+    <pre>
+        setInterval(할일, 시간);
+        clearTimeout(대상); 멈출시간
+    </pre>
+    <script>
+        var count = 0;
+        setInterval(function(){
+            alert('미니렁이 5초마다부활')
+            count++;
+            if(count == 4);{
+                clearTimeout(greeting2)
+            };
+
+            
+        }, 5000);
+        
+        
+        
+    </script>
+</body>
+
+</html>

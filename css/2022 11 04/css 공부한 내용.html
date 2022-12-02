@@ -1,0 +1,1221 @@
+html 의 태그는 
+
+포토샵처럼 툴을 사용한 도구로인해 태생이 정해지는 것이 아닌
+기본적인 태생은 사용할수있는 공간 ( 블럭 ) 으로 이루어져 있다.
+
+
+
+웹페이지 생성당시 각 프로그램의 작성순서
+
+
+태그자체를 스타일을 줄떄는 태그명 자체를쓰지만
+
+클래스명이 있는 프로퍼티에 스타일을 줄떈 클래스명 앞에 . 을 붙인다.
+
+
+1. 인라인 방식
+
+웹표준
+html
+css
+javascript 
+
+웹페이지를 생성할때는 4가지를 서로 이렇게 분리해서 작성 해주는 것 이 좋다. 
+
+
+
+css 를 사용할땐 태그자체를 코드에 작성하는 방법 보다는
+
+헤드에 <link rel="stylesheet" href="">를 사용한 불러오기를 통해 css 를 적용하는 것이
+깔끔하고 주로 쓰는 방법이다.
+
+<a href=""></a>
+<a href=”#”><img ???=”img/logo.png”></a>
+<img src="" alt="">
+
+<ul>
+    <li>Company Info</li>
+    <li>Ceo Message</li>
+    <li>location</li>
+</ul>
+
+
+기본적으로 css 를 사용할땐
+
+html 헤드에 위치하는 곳에 엘리먼트를 작성하여 사용한다
+사용할 태그 또는 클래스 네임 앞에 . 을 붙인뒤 그대로 이름을 작성하여 적용시킨다
+
+
+
+    02 color
+
+기본적으로 color 프로퍼티를 사용할때는 컬러의 코드뿐만이아니라
+각종 rgb 값과 색상코드로도 사용이 가능하다.
+
+ex) 
+color:rgb(255,255,255);
+color:#ffffff
+
+그런데 컬러코드를 사용하는 경우에 각 2글자마다 의 텍스트가 일치한다면
+한글자로 줄여서 써도된다
+
+ex) 
+color:#fff = color:#ffffff
+color:#0ff = color:#00ffff
+
+그외에 background:color 프로퍼티를 사용하면
+글자의 배경색을 지정할 수 있다.
+
+background:color: rgb(0,0,255);
+background:color: #0000ff;
+
+또한 rgb 값으로 컬러를 지정할때 오퍼서티를 적용할 수 있는데 그방법은 
+컬러프로퍼티 뒤에 a 를 붙이는 것 이다.
+
+ex)
+color:rgba(0,0,255,0.5)
+
+또한 opacity 프로퍼티를 사용하여 직접 조절도가능하다.
+
+ex)
+opacity:1; 
+(수치의 조절은 상수값을 0~1 사이로 지정한다.)
+
+이다
+
+마지막으로 rgb 차트의 각도 (빨주노초파남보), 색조 , 밝기 로 색을 조절할 수도있는데
+
+color:hsl(240,100%,100);
+의방법으로 구현할 수 있다.
+(주의할 점은 기본적으로 이런방법은 잘쓰이지않고 3번째의 밝기를 100으로 지정할시 흰색에 가까운 색상이 된다.)
+
+
+===============================================================================
+
+
+
+    03_unit (단위)
+
+기본적으로 사용하는 요소는 상수 ,% , vw 등을 사용한다.
+
+
+ex)
+
+    width: 300;
+    background-color:green;
+} 
+
+이 엘리먼트를 사용할 시 작성한 요소의 크기가 조절된다
+
+ex)
+
+    width: 50%;
+    background-color:green;
+
+이 엘리먼트를 퍼센트로 사용할시 사용자가 펼쳐놓은 웹페이지의 크기에 맞춰
+들어간 요소의 크기가 실시간 조절이 된다.
+
+
+    font-size란?
+
+폰트를 내가 수정할 때 사용하는 요소이다.
+
+
+    `em이란?
+em 단위를 사용하고 em 이란 원래 기본으로 사용되는 폰트의 크기16pt를
+또는 이후 내가 수정할 폰트의 기본타입 기준으로
+곱하기를 붙이는 단위이다.
+
+ex)
+font-size:2em;
+(두배늘어난 32pt)
+
+strong{
+    font-size:1.5em;
+}
+(기존 스트롱으로 늘어난 텍스트의 32pt 기준으로 1.5배 늘어난 48pt)
+
+    `rem
+
+이것은 root 과 같으며 문서의 기본값이라는 뜻이다. = 16px = 16의배수
+이것은 무조껀 문서의 기본값에서 곱하는 값이다
+
+font-size:14pt
+를 사용한 상태에서 rem 을 사용할시 14x2가 되어 28이된다
+
+
+두개의 차이점은
+
+em 의 경우, 해당 단위가 사용되고 있는 요소의 font-size 속성 값이 기준이 됩니다. 반면에 rem 에서 r 은 root , 즉 최상위 요소를 font-size 속성 값 의미합니다. HTML에서 최상위 요소는 <html> 입니다.
+
+
+
+    vw vh란? (viewport)
+
+vh = viewport height
+
+
+
+vw = viewport width
+로 이루어져 있고
+
+브라우저가 보여지는 전체(스크롤바까지의)를 viewport 라고한다.
+
+
+사용법은 width: 100vw;처럼 뒤의 상수에 vw 를 붙인다
+
+또는 폰트의 단위로도 사용하는 경우가 있다.
+
+기본적으로 주어진 뷰포트의 부모와 자식을 만들었다고 과정하면
+자식의 크기를 width: 100%; 사용하여 크기를 부모와같이 만든다하더라도
+부모보다 작게 설정이된다
+(자식이 부모를 침범할수 있는 허용치가 존재)
+
+그러나
+
+width: 100vw; 를 사용할시 자식이 부모를 침범하여 넘치는 경우가 생긴다
+
+웹페이지의 유저 입장에서는 가로스크롤의 사용을 꺼려하기때문에 ( 금기 )
+width:??vw 를 사용하지않는 것으로  자식이 부모의 할당량을 침범하지 않게 해야한다.
+ 
+=================================쉽게풀어참조한글========================
+
+vh 와 vw 는 열려있는 화면 전체의 상대길이이기 때문에 스크롤바를 포함한 길이를 반환합니다!
+
+반면에 % 는 창이 중심이 아닌, %를 쓰고 있는 요소의 부모 요소의 길이에 맞게 반환합니다.
+
+또한, 그냥 전체 화면의 %를 쓴다 하더라도 스크롤 바를 포함하지 않은 현재 화면 길이만을 반환하죠.
+
+라고한다 ㅇㅇ..
+
+====================================================================
+ 그럼 vw 는 언제 사용할까?
+
+핸드폰이나 아이패드등 작은 기기를 쓸때만 사용한다.
+
+
+
+
+
+
+
+
+
+
+폰트사이즈의 크기를 비교한 표를 참고하고 직접 찾는 사이트는
+http://pxtoem.com/ 이다.
+
+
+(따로 공부해봐야겟따)
+
+
+
+===================================================================
+09_class_selector
+
+id 명은 꼭 필요한 경우 아니면 안쓰는 경우가 좋다. (그이유는 검색)
+
+
+    10_id_selector
+
+
+태그명과 클래스명이 아닌 아이디가 붙어있는 태그를 선택하고 싶다면
+id 명 앞에 #을 붙인다
+
+ex)
+<style>
+	#para1{
+		text-align:center
+	}
+	#para1{
+		color:red
+	}
+</style>
+
+
+
+
+    11_desc_selector
+
+후손or자손 선택자
+
+수많은 자식으로 이루어진 코드에서
+원하는 자식의 태그만 내가 직접 스타일을 적용하고 싶다면 
+그때 자손 선택자를 이용 해야 한다.
+
+ex)
+<style>
+nav > ul > li > a{
+    background-color: green
+    ;
+}
+</style>
+
+> 없이 공백을 써놓는다면 맨마지막으로 > 이 적용된 태그의 자식요소들이 전부 선택이 된다.
+( img태그를 쓸때 ../ 를 사용하듯이 최대한 확실한 위치를 적용해야 한다는 것)
+
+이것은 클래스명을 쓰는것 대신 사용할경우
+
+웹페이지 자체의 무거움이 덜해져서 많이 쓰이곤한다.
+
+즉 클래스명이나 id 를 많이 사용할 수록 웹페이지 자체가 무거워 지기 때문에 잘 조율해서 사용하는 것이다.
+
+
+
+    12_siblings
+
+형제선택자
+
+
+h1 + ul{
+    background-color: rgb(146, 172, 108);
+}
+h2 + ul{
+    background-color: rgb(146, 172, 108);
+}
+h3 + ul{
+    background-color: rgb(146, 172, 108);
+}
+
++는 다음으로 오는 특정 형제태그만을 지정
+
+~는 태그뒤에 오는 모든 형제태그들을 지정
+
+
+
+
+https://codepen.io/alikerock/pen/MjWGMz 
+
+<style>
+	.area .list{
+		background-color:yellow;
+	}
+</style> 와
+
+<style>
+	.area.list{
+		background-color:yellow;
+	}
+</style>
+
+.area .list 자식중에
+.area.list 자신중에
+
+
+
+==============================================================
+
+
+13_attr_selector
+
+어튜리뷰트를 스타일을 주고싶을땐 [] 대괄호를 이용해서 연다
+
+클래스명에서 _또는 띄어쓰기가 있는 공통적인 이름을 가진 클래스명이 있을때
+특정 클래스명 하나만 지정하고 싶다면 ^ 를 이용해야한다
+
+<a href="" class="inner_sm">link</a>
+<a href="" target="_self" class="inner_big">google</a>
+
+두개의 코드가 있을떄 클래스명중 inner 만 선택하고싶다면
+<style>
+[class^="inner"]{
+    font-weight:bold;
+}
+</style>
+이런식으로 선택하면 된다.
+단 ^ 대신 $ 을 쓰는경우도 있는데 이런경우 그 어튜리뷰트로 끝나는 경우만 선택을한다
+ex)
+
+<style>
+    [class$="inner"]{
+        font-weight:bold;
+    }
+    </style>
+
+<a href="" class="sm_inner">link</a>
+<a href="" target="_self" class="big_inner">google</a>
+
+이렇게말이다.
+
+
+
+
+
+또한 attribute~="value"
+같이 어튜리뷰트 이름에 물결 표와 이퀄이 같이 되어있다면
+
+스페이스바 로 확실한 구분이 되있거나 하나의 단어로 이루어진(그단어가포함된) 어튜리뷰트만 선택한다.
+
+ex)
+<style>
+[title~=flower] {
+    font-weight:bold;
+}
+</style>
+ 일경우
+
+<a href=" "class = "klematisflower"></a>
+ 은 선택이되지만
+ <a href=" "class = "klematis-flower">은 선택이안된다
+
+
+
+마지막으로 
+CSS [attribute*="value"] Selector 의 경우도 있는데
+
+
+
+
+
+
+14_pseudo-class
+
+가상선택자
+
+웹페이지를 보는 과정에서 사용자가 tap 키를 누를시 
+선택영역이 보이는 경우가 있는데 이걸 지우는 방법이
+
+a{
+    outline:none;
+}
+
+이다
+
+
+    `within 이란?
+
+form p:focus-within{
+    background-color:#ebebeb;
+}
+
+p태그의 자식요소중에 누구든 focus 가 관련된 것이 있다면
+전부  선택되는방법
+
+
+
+
+
+
+15_pseudo-element
+
+
+가상요소 선택자
+
+attribute :: before{} 을 사용할시 그 어튜리뷰트의 앞쪽의 공간을 선택할수 있다.
+attribute :: after{} 을 사용할시 그 어튜리뷰트의 앞쪽의 공간을 선택할수 있다.
+
+이것에 활용법이 있다.
+( 가상의 공간을 생성하는 것인지 아니면 그저 컨텐츠를 추가하는건지 검색해야함 )
+
+팁으로 유니코드를 사용한 텍스트에 컨텐트를 추가할떈 
+역슬래쉬 ( 엔터위 ) 유니코드를 사용하면 된다
+ex)
+
+\2721
+
+
+
+16_nth-child
+
+
+짝수나 홀수를 결정할때는
+
+짝수는 (even) 또는(2n)
+홀수는 (odd)또는 (2n+1)를 사용하는데
+여기서 n 은 0을 뜻한다.
+
+
+
+
+
+
+17_nth-of-type
+
+
+
+19_not_selector
+부정선택자 , 반대선택자
+
+내가 선택한 태그의 부모자식 중 자식에서 내가 선택한 자식을제외한 나머지를 스타일을 주는방법
+
+*를 주면 그태그의 모든 자식이 선택된다.
+
+그러나 반대로
+
+<style>
+    header *:not(h1){
+        background-color:bisque;
+    }
+</style>
+
+이런식으로 :not 을 적용경우 내가 지정한 h1 (태그)를 제외한 나머지가 선택된다.
+
+<style>
+li:not(:last-child){
+    background-color:bisque;
+}
+</style>
+이런식으로도 적용이 가능한 부분.
+
+
+
+
+=========================================================
+
+
+
+20_css_priority
+
+css 우선순위
+
+태그에 직접 기술한 css의 스타일적용이 아닌이상
+id 명으로 지정한 어튜리뷰트가 제일 우선순위가 높다.
+id 는 js의 const 와 같은 불멸의 속성을 띄기 때문이다.
+그다음으로 구체적으로 선택한게 우선순위가 높다.
+그 다음은 동일한 선택자의 경우 아래에 기술한 것이 우선순위가 높다. 
+
+그러나 
+
+!important 프로퍼티를 사용하게 된다면 우선권은 제1순위로 
+important 를 사용한 스타일로 넘어간다.
+
+우선순위를 점수로 나누자면
+
+tag 1
+class 10
+id 100
+인라인 1000
+!important 1억만점 ㅅㄱ
+
+(무시무시한점은 이점수가 진짜 실용이되는 점수라고함;; 합산한 점수만큼의 제일큰 숫자의 코드가 우선권을 가진다고함 )
+
+!important가 레전드인점 ㅇㅇ..
+
+이미지에 외부 스크립트나 css 를 적용한 효과를 지우고싶을경우
+
+그 효과를 지우는 스타일을 기술한 다음 !important 를 추가하는 순간
+절대성을 가진 스타일이 되어 버리기때문에 지울수있다.
+
+(이런 방법으로 밖에 못지운다고한다 ㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷ)
+
+
+
+
+
+
+21_font-face.html
+
+
+
+내서버에서  직접 로드하는 방법로드하는 방법
+
+
+<style>
+    @font-face {
+        font-family: "nanum gothic" ;
+        src: url(fonts/NanumGothic.woff) format ('woff');
+        src: url(fonts/NanumGothic.ttf) format ('truetype');
+    }
+</style>
+
+여기서 내가 가져온 폰트는 나눔고딕체 이다.
+
+즉 @font-face 는 시스템폰트를 -> 웹폰트로 변환 시키는 것이다.
+
+vs코드에서 폰트의 이름이 한글 또는 영문이나 중간에 공백이 있는경우 따움표를 무조껀 붙여야한다
+
+ex) 
+'나무체'
+gothic
+'nanum gothic' 
+
+
+
+
+
+
+<style>
+
+body{
+    font-family: 'nanum gothic' ,dotum , helvetica, sans-serif;
+}
+</style>
+이와같이 body 에 웹페이지 폰트 적용을 시킬수있는데 
+만약 시스템상 오류가 생길때에는 한글웹페이지 기준으로
+
+왼쪽에서 오른쪽 순으로 한개씩 적용 하면된다.
+
+한글 
+'nanum gothic'
+영문
+dotum
+맥용
+helvetica
+아무고딕체나 나오게 하는 코드
+sans-serif
+
+
+
+22_google_font
+
+외부 폰트 적용하는방법
+
+link 로 폰트 가져오기
+폰트 사이트에서  링크를 통해 스타일안쪽 아닌 위에 코드를 가져와 불러온뒤
+
+스타일에서  적용하고싶은 곳에  font-family 프로퍼티를 이용해서 적용하면 된다.
+
+
+
+기본적으로 css 에서는 폰트의 크기를 800이상을 지원안하기때문에
+
+웹사이트에서의  폰트링크를 가져올때는 800이상의 크기를 제외한
+링크만 가져오면된다 ( 웹페이지코딩의  간편화)
+
+
+@import 로 폰트 가져오기
+
+스타일 태그가 적용되어있는 @import 의 코드를 직접 외부사이트에서 가져와 스타일에 그대로적용하면된다 
+
+주의할 점은 import 로 직접가져온 스타일 코드형식의 폰트는
+
+스타일 태그의 최상단에 위치해야한다 (매우중요)
+
+
+
+
+
+
+23_font-size
+
+글자크기
+
+
+
+
+
+
+23_font-weight
+
+글자 두께
+
+thin 100
+
+light 300 
+
+normal 400
+
+medium 500
+
+bold 700
+
+
+
+
+25_text-decoration
+
+다른 태그들은 자식요소까지 전부 글자 밑줄이라던가 컬러는 적용이 되지만
+
+a태그만큼은 자식요소까지  "직접" 지정해줘야 한다. 
+
+
+
+ 또한 
+
+ <del></del> 태그를 이용해서 원래 스타일이 적용되있는 텍스트를
+
+
+<style>
+ del{
+    text-decoration: none;
+}
+</style>
+
+이런 사용법으로 스타일을 부분 지울수 있다.
+
+
+
+
+
+
+26_font-style
+
+
+
+
+
+
+27_text-align
+
+
+스팬태그에게 text-align 을 주어도 움직이지 않는 이유는
+
+p 태그나 h1 h2 등 왠만한 기본적인 태그는 글씨가 움직일 공간을 한줄로써부여하지만 
+
+스팬태그로 써놓은 텍스트는 텍스트 자체의 길이만큼밖에 할당량이 주어지기 때문에 text-align 으로는 움직이지 않는다.
+
+
+
+
+28
+
+phothshop tracking
+ 
+1000 1em
+100 0.1em
+10 0.01em
+
+
+29 text-indent
+원래 네이버는 
+
+이방식으로 텍스트를 저멀리 보내고 이미지를 선보이는 기법 ir 방법을 사용했었다.
+
+
+31
+
+
+
+<p class="line">
+    <img src="http://place-hold.it/200x200" alt="">
+</p>
+이것을
+
+<style>
+.pixel{
+    vertical-align: 20px;
+    
+}
+</style>
+
+이런식으로 스타일을 주면 상단으로 20px 이미지가 올라간다.`
+
+올라가면 올라간 만큼 공간이 비게된다
+
+그래서 나중에 css 작업을 하여 이미지 를 관리할때는 무조껀
+
+<style>
+img{
+    vertical-align: top;
+}
+</style>
+을 이용하여 빈공간이 없게끔해야한다
+
+( 빈공간이 생기는 이유는 이미지또한 글자의 성격을 가지고있기 때문)
+
+
+
+
+32_list-style
+
+
+
+
+<style>
+클래스명 {
+    list-style-type: 넣고싶은 모양;
+}
+</style>
+
+을 사용하면 
+
+그 클래스가 있는 태그의 자식들은 리스트의 스타일이 전부 넣고싶은 모양으로 변한다.
+
+
+
+33 display
+display
+
+글자속성을 가진 것들을 가로배치하는 기본적인 방법은 
+
+display 프로퍼티의 inline-block 을 사용하는게 기본적이다.
+
+img 와 video 같은 경우는 태생적인 inline-block 요소이다.
+
+만약 리스트와 같은 것들을 inline-block 요소로 만들경우
+
+li 같은 경우 각 한 리스트마다 코딩에서 엔터로 구분짓는 경우가 있는데
+이렇게될경우 웹페이지에서는 각 오브젝트간에 약간의 띄어짐이있다. 
+
+이것을 해결하는 방법이 있는데
+
+
+display 에 table 을 이용한 방법이다
+
+리스트의 부모에겐    display 요소에 table 을 넣고
+
+리스트의 자식들 에겐 너비를 33.3333%를 주고 display 에 table-cell 을 사용하면
+
+띄어짐없이 딱붙어있다.
+
+
+웹페이지에서는 오브젝트를 가릴 수 있는 방버이 많은데 
+
+그중하나는 
+
+<style>
+h3{
+    visibility: hidden;
+}
+는 공간을 차지하지만 선택은 불가능하고 보이지 않는데 
+</style>
+
+이것이다.
+
+또는 오퍼시티를 낮추는 방버인데
+
+opacity: 0% 를 해놓으면 단점은 마우스를 올릴시 커서가 표시가된다.
+
+마지막으로 display: none; 을 하는 것인데 이럴경우 공간차지도 하지않는다.
+
+
+
+
+
+
+34_overflow
+
+넘치는 화면 
+
+
+
+
+
+
+35_ 배경의 색깔
+
+
+
+
+
+36_background-image 배경의 색깔
+
+
+
+
+38_background position
+
+
+
+background-position:50% 50% ;
+
+포지션에서 부모 ( 배경 ) 자식 ( 내가움직이고싶은 이미지)
+라고 비교를한뒤
+
+내가 배경의 x축의 20% 만 움직이고싶다하면
+
+움직일떄의 기준점은
+
+배경의 20% 에  '자식'의 몸통의 x축 20% 가 닿는 위치로 설정이된다.
+
+즉 부모와 자식 둘다 자신의 이미지 크기가 서로의 기준이 된다는 것.
+
+
+https://codepen.io/alikerock/pen/EgxjVa 예제가있는데
+
+h1, p {float:left;}
+
+p {width:400px;margin-left:20px;}
+.logo a{
+	background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/layout2.jpg) no-repeat;
+; 
+	
+}
+h1 a{
+	
+	width:225px;
+	height:225px;
+	white-space:nowrap;/* 이건머임? */
+	display:block; /* 이건 이미지에 텍스트의 성질을 주는가? */
+	text-indent : -1000000000000000%;
+	overflow:hidden; /* 보낸 텍스트를 안보이게 하자 */
+}
+
+
+답이 이거임 다시한번 보기
+
+
+
+
+
+
+
+39
+
+사이즈를 px 로 지정할때 가로와 세로축 두개가 아닌 한개의 축만 적용할경우
+적용한 길이에 맞춰 도형의 전체의 비율이 변경된다.
+
+
+부모가 고정값이 아닐때 변하는 경우가 있따.
+
+
+cover 의 경우 
+
+가로축100% 와 비교를 한다면
+
+가로축 100% 는 부모의 가로길이가 작아질수록 자식의 이미지가 작아져 세로에 빈칸이 생기지만
+
+cover 의 경우는 가로의 길이가 작아져도 자식의 이미지가 그대로인 속성이 된다.(빈칸이 안생기고 이미지가 잘린다는 뜻임 )
+
+background-attachment: fixed;  ( 배경을 고정할거니?)
+
+
+
+번외 background 속성을 사용할때 요소명을 "background" 라고 작성을 했을때만 
+다중적인 요소를 넣을 수 있다.
+
+ex)
+<style>
+    gg{
+background: no-repeat 50% 0/cover fixed green url('img/bg.png');
+            font-size:20px;
+    }
+</style>
+
+
+
+
+
+
+
+40 _box-model (중요함)
+
+solid 요소 = 실선
+
+요소의 크기는 border 까지이다
+
+margin 은 요소의 바깥 영역 까지 이다
+
+
+
+40번 예제에서 배울수 있던 것은
+
+디자이너가 컨텐츠의 크기를 정확한 크기로 만들었을떄
+
+우리는 그것을 코딩할떄 보더와 마진을 포함한 크기를 적용해서 코딩을 해야한다
+
+
+
+
+41_box-model0-direcion
+
+padding, margin , border 
+
+20px 같이 수치를 한개만 적을시 사방으로 적용됨
+
+20px 10px 같이 수치를 두개 적용할경우 상하 20px 좌우 10px 로 적용이 되는 것 이다.
+
+20px 10px 5px 같이 수치를 3개 적용할 경우 상 20 좌우 10 하 5 로 적용이 된다.
+
+20px 10px 10px 5px 같이 수치를 4개 적용할경우 상20 우10 하10 좌 5 로 적용된다.
+(시계방향)
+
+이런 방법은 크기 뿐만이아니라 padding, margin , border 의 스타일을 지정할때도 
+똑같은 방법이된다.
+
+ex)
+border-style:solid dotted dashed;
+
+라고 할경우 맨위 쪽은 solid(줄) 좌우는 dotted(점선) 아래는 dashed(긴점선)이 적용되는 것이다
+
+
+
+ 만약 padding 의 크기를 오른쪽만 100을 주고싶다면
+
+ padding : 0 100px 0 0 라고 써도되지만
+
+ padding-right: 100px; 이라고 요소를 적는 것이 더 옳다 
+
+
+
+
+
+ margin요소와 같은 경우는 width의 요소값이 존재할때만 사용할 수 있다.
+
+ 그 이유는 width 는 좌우의 값이지만
+ 이걸 안정해 놓을경우
+ margin 은 블록요소이기때문에 정해놓지않은 좌우의 길이값 때문에 
+ 좌우를 전부다 차지하기 때문이다.
+
+
+기본적인 제작할때의 html 의 모든 요소들은 기본적으로 왼쪽 상단으로 정렬되려는 성질이 있다.
+
+예를들어 margin-right: -100px; 같은경우는 오른쪽으로 margin의 오브젝트가  움직이지 않는다
+
+box-sizing:border-size
+
+
+
+
+42 float
+
+float 이란 
+
+1.지정한 (좌,우)방향으로 이동
+
+2.크기가 내용만큼 크기가 잡힌다또는 변환한다 
+( inline->block )
+인라인 요소여도 float 을 적용할경우 block 처리가 된다는 말씀임
+
+3.다른 요소들이 달려든다  
+
+(플롯을 걸었던 오브젝트에 달려드는 것인지 좌측 상단의 기준으로만 달려드는것인지 )
+
+4. clear 요소를 사용할시 달려드는 요소를 제거가능
+
+ex)
+clear:left 
+
+
+
+
+
+
+
+
+
+44 relative
+
+static 
+기준위치( 기본값 )
+
+
+
+left right top bottom 같은 것을  
+position : relative 에 그냥 사용할경우
+움직임이 없다.
+
+즉 보더 마진 등등의 블럭 자체의 실체의 부피가 변하거나 움직이는경우
+
+빈공간만큼의 공간이 생기지만
+
+position : relative 를 사용한 자식의 배치의 경우
+
+요소를 일반적인 문서 흐름에 따라 배치한다.
+
+요소 자기 자신의 원래 위치(static일 때의 위치)를 기준으로 배치한다.
+
+원래 위치를 기준으로 위쪽(top), 아래쪽(bottom), 왼쪽(left), 오른쪽(right)에서 얼마만큼 떨어질 지 결정한다.
+위치를 이동하면서 다른 요소에 영향을 주지 않는다.
+문서 상 원래 위치가 그대로 유지된다.
+
+
+45 absolute
+
+부유한다.
+
+absolute 의 기준은 가까운 부모중 position 속성의 값이 기본값 (static) 이 아닌요소가 기준이 된다.
+
+가까운 부모중 position 속성의 값이 없다면 body 가 기준이 된다.
+
+내가 처음 요소로 이동한방향이 있을경우 
+이후 margin 을 이용한 오브젝트의 움직임은 내가 처음 사용했던 방향을 기준으로 사용해야한다.
+
+right:100%; 라고 사용했으면 margin-left: 블라블라 ;는 안된다는 것임
+right:100%; 라고 사용했으면 margin-right: 블라블라 ; 는 가능함
+
+
+
+
+48_sticky
+
+
+
+49_z_index
+
+웹페이지의 z축을 설정할 수 있다. <- 중요 
+
+나중에 또는 최근, 아래에 작성한 앞쪽에 부유한다.
+
+z-index 값이 클수록 위쪽으로 부유한다.
+
+z또한 z-index 는 혼자 쓰이는 것이아니 
+포지션이 내가 비교하려는 대상과 같아야된다 
+
+ex) 
+
+position: relative;
+
+그러나  자식간의 z-index 의 벨류값 ( 크기 ) 가 아무리 차이나도
+
+부모끼리의 z-index 대결에서 패배 한다면 
+
+z-index 값이 커서 이긴 부모의 자식들이 우선순위로 올라간다.
+
+
+
+
+
+
+
+
+drop_shadow 넣는법
+
+
+
+
+size는 block 값으로 표현하면 된다.
+
+
+/*     box-shadow: x y blur [size] color; */가 기본값이다.
+
+ex)
+
+box-shadow: 0 5px 3px rgba(0,0,0,.1);
+
+
+사이트참고 : http://psd-to-css-shadow.com/
+
+
+사선으로 이펙트효과가 켜져있는경우를 확인해야함
+
+확인 하는 방법은 포토샵의 이펙트 값에서 그림자의 블러값을 0으로 만들어
+
+확실하게 그림자를 확인한뒤
+
+오브젝트의 본체와 그림자의 상단위 네모기준으로 빈칸의 길이를 알아낸뒤 
+
+상위사이트에서 나왔던 값을 적용하여 사용할 수 있다. 
+
+사선으로의 그림자를 켜고 싶다면 
+
+
+
+2.02_gradient
+
+    글라디언트(그래디언트) 효과 를 주는 방법은
+
+    background:linear-gradient(방향 , 색상값 위치, 색상값 위치);
+<style>
+    .linear{
+        background:linear-gradient(90deg, #0000f3 0%, #0000f3 20%,#fff 21%,#fff 80%, #0000f3 81%);
+    }
+</style>
+
+이것은
+
+<style>
+    .linear{
+        background:linear-gradient(90deg,  #0000f3 20%,#fff 21%,#fff 80%, #0000f3 81%);
+    }
+</style>
+
+이것 과 같다
+
+또한 background: repeating-linear-gradient 를 사용할시
+
+내가 지정한 색상의 패턴또한 만들 수 있다.
+
+
+
+원을 만들고싶을떈 
+
+background-image:radial-gradient(모양 원의 중심점 좌표 , 색상값 위치, 색상값 위치);
+
+을 사용한다.
+여기서 모양은 정원은 circle 을 사용하고 타원형은 ellipse 를 사용한다.
+
+farthest-side 중심점에서 가장 먼 면
+farthest-corner 중심점에서 가장 먼 코너
+
+
+
+
+
+2.03_transition   
+전환
+
+transition 이란 수치로 이루어진 값 ( 숫자 , 상수 ) 을 동적인 효과로 눈에보이게
+변환시켜주는 요소이다.
+
+transition-property: width; height; 등등 <!-- 어떤방향으로 -->
+transition-duration:   0.3s 0.5s ; 등등   <!-- 몇초에 걸쳐서 -->
+transition-delay:   0.3s 0.5s; 등등 <!-- 마우스를 갖다댄뒤 다시 나왔을떄 -->
+
+
+
+
+transition-timing-function: ease-out;  ease-in; ease-in-out;등등 <!-- 도입부가 빠르게 , 도입부가 느리게 -->
+
+이것을 cubic-bazier.com  또는 easings.net에 접속하면 좀더 쉽게 접근하여 변경할 수 있다.
+
+직접 사이트에서 정한뒤 copy 를 눌러 나왔던 숫자를 그대로 넣으3
+
+
+
+<style>
+    div img {
+         width: 200px;
+         opacity: 0.5;
+       
+        transition:width 0.3s opacity 1s, 0.5s ease;/*  뒤에있는게 지연시간 */
+    }
+</style>
+    이런 식으로 background 처럼 변환 시킬 수 있다.
+
+
+    기본적으로 transition 은 hover 을 이용한 결과값까지 적용하여 사용하는데
+
+    transition 을  hover 가아닌 기본토대의 클래스명에 시간을 적용할시 
+    hover 까지 적용이 되고 
+
+    hover 에서 까지 총 두가지의 시간을 적는다면 초입부와 후입부의 시간을 설정할 수 있다.
+
+
+
+
+animation
+<style>
+    .box{
+            width: 100px;
+            height: 100px;
+            background: green;
+            animation-name:changecolor;
+            animation-duration: 2s;  /* 바뀐뒤의 */ 
+            animation-delay: 0.5s;    /* 페이지가 열리고나서의 몇초뒤시작 */
+            animation-timing-function: easy;   /* 애니메이션의 속도모드 */
+            animation-fill-mode: forwards;
+            animation-iteration-count:infinite;  /* 반복횟수 왼쪽건 무한임*/
+            animation-direction : alternate-reverse; /* 방향임 normal 과 reverse alternate가 있다. */
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+calc 에대해 공부 
+
+white-space:nowrap; 에 대해서 검색해야함
+
+
+
+
+https://codepen.io/alikerock/pen/ambzwM 이거 풀어야함 개어려움
+
+
+display:block 은 이미지에 문자의 성질을 부여하는가?
+
+
+
+
+https://codepen.io/alikerock/pen/VKwdLj 이거 공부해야함;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+hover 하고 안하고의 차이  커서를 가져갔을때의 효과
+ 
+
+css 에서의 : 란?
+
+
+float 을 사용할때의 기준  (언제 사용하는게 좋은가? )

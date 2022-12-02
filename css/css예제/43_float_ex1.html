@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float exercise1</title>
+    <style>
+   
+        
+        .portfolio_list {
+            width: 860px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #ebebeb;
+            overflow: auto;
+        }
+        .portfolio_list li{
+          float:left;
+          margin-right: 20px ;
+        }
+       
+    
+        .portfolio_list li:nth-child(4) {
+          margin-right: 0 ;
+        }
+        .portfolio_list:after {
+        content:'';
+        clear:left;
+        display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Portfolio List</h1>
+    <ul class="portfolio_list">
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        
+    </ul>
+
+
+
+</body>
+
+</html>
+
+
+<!-- 해법은 
+
+1. 마지막 리스트의 자식에게 오른쪽의 margin 값을 주면안됨
+
+2. 각 ul의 자식인 리스트들에게 float을 적용하여  코딩에서의
+리스트간의 공백(엔터키눌러서만든 공백)을 맞춰 정확한 크기 만들기-->

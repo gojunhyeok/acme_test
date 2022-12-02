@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            margin: 2rem auto;
+            position: relative;
+
+            
+        }
+        .linear{
+            /* background:linear-gradient(90deg, #0000f3 0%, #0000f3 20%,#fff 21%,#fff 80%, #0000f3 81%); */
+            background:repeating-linear-gradient(#fff 0%, #f00 30%);
+        }
+
+        .radial{
+            height: 200px;
+            background-image:radial-gradient(circle farthest-corner at 50px 100px, #000 0%, #fff 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gradient</h1>
+    <div class="box linear">linear gradient</div>
+    <div class="box radial">Radial gradient</div>
+</body>
+
+</html>
+background: rgb(228,82,82);
+background: linear-gradient(165deg, rgba(228,82,82,0.7595413165266106) 0%, rgba(41,69,223,0.7511379551820728) 100%);

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>background-repeat</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+/* ul li {
+	
+	display: inline-block;
+	
+}
+ul li a{
+	background-image: url(../sprites_base/img/tab_sprites.gif);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999em;
+	width : 108px;
+	height: 32px;
+}
+ul li:nth-child(2) a{
+	background-position: center 0;
+}
+ul li:nth-child(3) a{
+	background-position: 100% 0;
+}
+ul li a:hover{
+	background-position: -32px;
+} */
+	.upload{
+		background-image: url(img/sp_main_naver.png);
+		background-repeat: no-repeat ;
+		width : 103px;
+		height: 103px;
+		display: block;
+		background-position: -299px -424px ;
+		text-indent: 999em-;
+	}
+	.upload:hover{
+		background-position-x: -406px;
+	}
+	label{
+		background-image: url(img/sp_main_naver.png);
+		background-repeat: no-repeat;
+		display:inline-block;
+		width: 274px;
+		height: 107px;
+		background-position: -550px -223px;
+		text-indent: 999em-;
+
+	}
+	#darkmode{
+		display: none;
+	}
+	#darkmode:checked + label{
+	
+		background-position-y: -100px;
+	}
+	
+</style>
+</head>
+<body>
+	<h1>as123df</h1>
+	<ul>
+		<li><a href="#">스타</a></li>
+		<li><a href="#">프로그램</a></li>
+		<li><a href="#">이슈</a></li>
+	</ul>
+	<hr>
+	<a href="" class="upload">업로드</a>
+	<hr>
+	<input type="checkbox" id="darkmode">
+	<label for="darkmode">darkmode</label>
+
+</body>
+</html>
+
+
+
+
+
+

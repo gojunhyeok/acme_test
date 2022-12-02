@@ -1,0 +1,113 @@
+
+header h1{
+    float: none;
+    /* text-align: center; */
+}
+header .logo a{
+    /* display: inline-block; */
+    margin:0 auto;
+}
+/* a태그로 이루어진건 text 이고 상단의 h1 까지는 블럭 요소이기때문에 a태그의 블락은 마진이 통하지 않았고 text 요소인 a 가 margin auto 가 됬던 것 이다.  */
+.banner_tt {
+    margin-bottom: 81px;
+}
+form{
+    width: 350px;
+    margin:0 auto 54px;
+    position: relative;
+}
+form .field{    
+    position: relative;    
+}/* 왜 field input 에 relative 를 안거는거임? 이유는 i 랑 input 이 형제요소라 relative를 걸면 부모자식관계가 아니기 때문에 적용되지 않는다.*/  
+form .field + .field{
+    margin-top: 10px;
+}
+form .field i{
+    position: absolute;
+    left: 20px;
+    top:0;
+    bottom: 0;
+    line-height: 54px;
+    color: #a8a8a8;
+}
+form .field input{
+    background: #fff;    
+    border-radius:2px;
+    line-height: 54px;
+    width: 100%;
+    padding: 0;
+    border:none;
+    display: block;
+    padding-left: 45px;
+    box-sizing: border-box;
+    outline:none;
+    color: #a8a8a8;
+}
+form .field input:focus{
+    box-shadow: inset 0 0 7px rgba(0,0,0,.7);
+}
+
+/* form .field input::-webkit-placeholder{
+    color: #a8a8a8;
+    font-style: italic;
+}
+form .field input::-moz-placeholder{
+    color: #a8a8a8;
+    font-style: italic;
+}
+form .field input::-ms-placeholder{
+    color: #a8a8a8;
+    font-style: italic;
+} */
+form .field input::placeholder{
+    color: #a8a8a8;
+    font-style: italic;
+}
+form .button input{
+    background: none;
+    border:1px solid #fff;
+    padding: 0;
+    font-weight: bold;
+    color:#fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+footer .cta{
+    background: none;
+    color: #2c2c2c;
+}
+.feedback{
+    width: 262px;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    line-height: 27px;
+    color:#f30000;
+    border-radius:2px;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 60px);
+}
+.feedback p + p{
+    margin-top: 27px;
+}
+   
+.feedback:before{
+    width: 0px;
+    height: 0px;
+    display: block;
+    content:'';
+    border-width:13px 22.5px;
+    position: absolute;
+    border-color: transparent #fff transparent transparent ;
+    border-style: solid;
+    right: 100%;
+    top: 4px;
+    
+}
+/* before 랑 after 는 생성할시 기준의 자식요소로 생성된다.
+
+
+ex) 
+
+*/

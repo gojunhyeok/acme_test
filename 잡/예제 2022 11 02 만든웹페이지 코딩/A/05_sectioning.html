@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sectioning</title>
+</head>
+<body>
+    <!--
+        <span><h2>heading title</h2></span> 오류
+
+        <h2><span>heading</span> title</h2> 정상
+        <h2><strong>heading</strong> title</h2> 정상
+        <span> 정상
+            <a href="">link1</a>
+            <a href="">link2</a>
+            <a href="">link3</a>
+        </span>
+    -->
+    <div id="header" role="banner">
+        <h1>header</h1>
+        <div id="gnb" role="navigation"></div>
+    </div>
+    <div id="container" role="main">
+        <div class="content"><h2>left content</h2></div>
+        <div class="content"><h2>right content</h2></div>
+    </div>
+    <div id="footer" role="contentInfo">
+        <h3>footer</h3>
+    </div>
+</body>
+</html>

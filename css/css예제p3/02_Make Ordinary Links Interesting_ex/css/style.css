@@ -1,0 +1,83 @@
+body {
+  font-family: "Open Sans";
+  font-size: 1.125rem;
+  line-height: 1.618em;
+  color: #454545;
+}
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+a {
+  color: #3498db;
+}
+
+/* .fade_in_bg{
+  text-decoration: underline wavy rgb(216, 255, 43);  본문내역을보면 g처럼 실선밑으로는 선이 깨지는데 under line으로 조절이 불가하다 
+} */
+.fade_in_bg{
+  text-decoration: none;
+  border-bottom: 1px;
+}
+.fade_in_bg:hover{
+  background: #3498db;
+  color:#fff
+}
+
+a[class^="slide_"]{
+  text-decoration: none;
+  border-bottom: 1px;
+  padding: 0 0.25em 0.05em;
+  transition:0.35s;
+  position: relative
+  overflow:hidden;
+}
+
+a[class^="slide_"]:after{
+  content:attr(data-linktext);
+  position: absolute;
+  padding: 0 0.25em 0.05em;
+  transition:0.35s;
+  background: #3498db;
+  color:#fff
+}
+
+.slide_form_left:after{
+
+  top:0;
+  bottom:0;
+  left:-100%;
+  right:100%;
+
+}
+.slide_form_bottom:after{
+
+  top:100%;
+  bottom:-100%;
+  left:0%;
+  right:0%;
+
+}
+.slide_form_right:after{
+
+  top:0;
+  bottom:0;
+  left:100%;
+  right:-100%;
+
+}
+.slide_form_top:after{
+  top:-100%;
+  bottom:100%;
+  left:0;
+  right:0;
+
+}
+
+a[class^="slide_"]:hover{
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}

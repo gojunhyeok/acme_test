@@ -1,0 +1,12 @@
+    <link rel="stylesheet" href=""> 의 정이란?
+물어봐야함
+
+
+
+페이지를 만들때 기본적인 폰트나 기본적인 (공통적인) 스타일을 가져올땐
+웹페이지의 전체에 <link rel="stylesheet" href="css/common.css"> 를 사용하는 것이 좋다.
+
+간혹 common.css 없이 css 를 한페이지에 모든 css를 적용하는 방법이 있는데
+유지보수 차원에서 매우 비효율적임 
+
+

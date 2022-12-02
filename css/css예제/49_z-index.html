@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            position: relative;
+            z-index: 2;
+        }
+
+        .siblings {
+            width: 200px;
+            height: 100px;
+            background: green;
+            position: relative;
+            top: -150px;
+            left: 60px;
+            z-index: 1;
+        }
+
+        div[class^="child"] {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .child1 {
+            background: blue;
+            z-index:1;
+            position: relative;
+        }
+        .child2 {
+            background: red;
+            position: relative;
+            top:-30px;
+            left:30px;
+        }
+
+        .child3 {
+            background: #fff;
+            z-index:10;
+            position: relative;
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="parent"> <!-- z-index 2 를 준상황 -->
+        <div class="child1">child 1</div>
+        <div class="child2">child 2</div>
+    </div>
+    <div class="siblings"> <!-- z-index 1 를 준상황 -->        <div class="child3">child 3</div>
+    </div>
+    <p> 미니렁이 </p>
+</body>
+
+</html>
